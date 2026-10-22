@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="360" viewBox="0 0 480 360">
+  <rect width="480" height="360" fill="#E5EFD9"/>
+  <rect x="12" y="12" width="456" height="336" rx="16" fill="none" stroke="#4E8A3A" stroke-width="3" stroke-dasharray="12 10"/>
+  <text x="50%" y="46%" text-anchor="middle" font-family="Noto Sans JP, sans-serif" font-size="22" font-weight="700" fill="#3A6B2A">ココロミーのイラスト</text>
+  <text x="50%" y="56%" text-anchor="middle" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#3A6B2A">about.svg → 差し替え予定</text>
+</svg>

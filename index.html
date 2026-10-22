@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 公開範囲が確定するまで検索エンジンに載せない（lp-spec.md §8） -->
+  <meta name="robots" content="noindex, nofollow">
+  <title>ココロミー企業パートナー｜地元企業の名前を、長野の学生に届ける</title>
+  <meta name="description" content="長野の学生メディア「ココロミー」の学生ライターが地元企業を取材し、WebとInstagramで発信。月1回の交流会「オモモ会」で学生と直接つながる年間プログラムです。月額40,000円（税込）。">
+
+  <!-- OGP（TODO: 公開URL・OGP画像が決まったら差し替え） -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ココロミー企業パートナー｜地元企業の名前を、長野の学生に届ける">
+  <meta property="og:description" content="学生ライターが地元企業を取材し、WebとInstagramで発信。月1回の交流会で学生と直接つながる年間プログラムです。">
+  <meta property="og:url" content="https://example.com/">
+  <meta property="og:image" content="https://example.com/assets/images/ogp.png">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<!-- ===== アイコン定義（Lucide / ISC License） ===== -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <defs>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></symbol>
+    <symbol id="i-monitor" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-camera" viewBox="0 0 24 24"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></symbol>
+    <symbol id="i-yen" viewBox="0 0 24 24"><path d="M12 9.5V21m0-11.5L6 3m6 6.5L18 3"/><path d="M6 15h12"/><path d="M6 11h12"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3"/></symbol>
+    <symbol id="i-sprout" viewBox="0 0 24 24"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></symbol>
+    <symbol id="i-message" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+    <symbol id="i-building" viewBox="0 0 24 24"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-utensils" viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip-link" href="#main">本文へスキップ</a>
+
+<!-- ===== 固定ヘッダー ===== -->
+<header class="site-header" id="top">
+  <div class="site-header__inner">
+    <!-- TODO: ロゴデータ到着後に <img> に差し替え（README「TODO一覧」参照） -->
+    <a class="logo" href="#top" aria-label="ココロミー企業パートナー トップへ">
+      <span class="logo__sub">長野の学生と企業をつなぐ</span>
+      <span class="logo__main">ココロミー<span class="logo__accent">企業パートナー</span></span>
+    </a>
+    <nav class="global-nav" aria-label="ページ内ナビゲーション">
+      <ul>
+        <li><a href="#results">ココロミーの実績</a></li>
+        <li><a href="#service">サービス内容</a></li>
+        <li><a href="#flow">ご利用の流れ</a></li>
+        <li><a href="#price">料金</a></li>
+        <li><a href="#faq">よくある質問</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn--primary btn--sm" href="#contact">お問い合わせ</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ===== #1 ヒーロー ===== -->
+  <!-- 背景: assets/images/hero-bg-blur.webp（「名称未設定のデザイン.png」をぼかしたもの。CSSで指定） -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <p class="hero__label">長野の学生メディア「ココロミー」の企業向け年間プログラム</p>
+        <!-- キャッチコピーは案（代案は README「キャッチコピー代案」欄） -->
+        <h1 class="hero__title" id="hero-title"><span class="nowrap">地元企業の名前を、</span><span class="nowrap">長野の学生に届ける。</span></h1>
+        <p class="hero__lead">学生ライターが取材し、WebメディアとInstagramで発信。月1回の交流会「オモモ会」で、学生と直接つながる年間プログラムです。</p>
+        <p class="hero__price">
+          <span class="hero__price-label">月額</span>
+          <span class="hero__price-num">40,000</span><span class="hero__price-unit">円</span>
+          <span class="hero__price-tax">（税込）</span>
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary btn--lg" href="#contact">まずは問い合わせる<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn--ghost" href="#service">サービス内容を見る</a>
+        </div>
+      </div>
+      <figure class="hero__visual">
+        <!-- 元画像: Warm Cafeteria Conversation.png（WebPに変換済み） -->
+        <picture>
+          <source media="(max-width: 599px)" srcset="assets/images/hero-cafeteria-sp.webp" width="768" height="512">
+          <img src="assets/images/hero-cafeteria.webp" width="1536" height="1024" fetchpriority="high" alt="食堂で学生と社会人がテーブルを囲み、食事をしながら話しているイメージ写真">
+        </picture>
+        <figcaption>※ 写真はイメージです</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===== #2 こんな企業におすすめ ===== -->
+  <section class="section section--alt" id="recommend" aria-labelledby="recommend-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="section-head__en">For you</p>
+        <h2 class="section-head__title" id="recommend-title">こんな企業におすすめです</h2>
+      </div>
+      <ul class="check-list reveal">
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>学生に、もっと自社を知ってほしい</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>地域に根ざした企業としてのイメージを発信したい</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>若手社員・現場の魅力を伝えたい</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>学生と直接つながり、ファンを増やしたい</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>学生が何を考えているか、リアルな声を知りたい</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CTA（#2の後） -->
+  <div class="cta-band">
+    <div class="container cta-band__inner reveal">
+      <p class="cta-band__text">ひとつでも当てはまったら、まずはお気軽にご相談ください。</p>
+      <a class="btn btn--primary" href="#contact">問い合わせる<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+
+  <!-- ===== #3 実績（ココロミーの紹介＋数字＋公開済み記事） ===== -->
+  <section class="section" id="results" aria-labelledby="results-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="section-head__en">About &amp; Results</p>
+        <h2 class="section-head__title" id="results-title">ココロミーの実績</h2>
+      </div>
+      <div class="about reveal">
+        <div class="about__text">
+          <p>ココロミーは、長野の大学生が運営する地域密着メディアです。学生の目線で、長野の「人・企業・暮らし」の魅力を取材し、WebメディアとInstagramで発信しています。</p>
+          <dl class="about__operator">
+            <dt>運営</dt>
+            <dd>株式会社OMOMO</dd>
+          </dl>
+        </div>
+        <div class="about__visual">
+          <!-- TODO: AI生成イラストに差し替え（推奨: assets/images/about.webp） -->
+          <img src="assets/images/placeholder/about.svg" width="480" height="360" loading="lazy" alt="ココロミーの学生ライターが記事を書いている様子のイラスト（差し替え予定）">
+        </div>
+      </div>
+
+      <!-- 数字（lp-spec.md §5-3・§6 の表記ルールに従う。PVは28日間の値なので期間を必ず併記） -->
+      <ul class="stats reveal">
+        <li class="stat">
+          <svg class="icon stat__icon" aria-hidden="true"><use href="#i-eye"/></svg>
+          <span class="stat__label">Webメディアのページビュー</span>
+          <span class="stat__value">約1.4万<small>PV</small></span>
+          <!-- TODO: 計測期間の日付を入力（例: 2026年9月1日〜9月28日） -->
+          <span class="stat__note">直近28日間（<span class="todo">【要入力】YYYY年M月D日〜M月D日</span>）の合計</span>
+        </li>
+        <li class="stat">
+          <svg class="icon stat__icon" aria-hidden="true"><use href="#i-instagram"/></svg>
+          <span class="stat__label">Instagramフォロワー</span>
+          <!-- TODO: フォロワーの実数と時点を入力 -->
+          <span class="stat__value"><span class="todo">【要入力】</span><small>人</small></span>
+          <!-- TODO: 大学名を載せるか確認中（載せない場合は「県内の大学生」等に調整） -->
+          <span class="stat__note">活動拠点の大学の、1学年の人数を超える規模です。</span>
+        </li>
+      </ul>
+
+      <!-- 公開済み記事カード -->
+      <div class="articles reveal">
+        <h3 class="articles__title">公開済みの記事</h3>
+        <p class="articles__lead">学生ライターが実際に取材・執筆し、ココロミーに掲載した記事です。</p>
+        <!-- TODO: 以下4枚はすべてダミー（サンプル）。公開済み記事3〜4本のURL・タイトル・企業名・サムネイル（OGP画像またはスクリーンショット）に差し替え、
+             .sample-badge と is-todo / aria-disabled を外す。公開前に掲載企業へ一言確認する（README 参照） -->
+        <ul class="article-grid">
+          <li>
+            <a class="article-card is-todo" href="#" aria-disabled="true">
+              <div class="article-card__thumb" role="img" aria-label="サンプルの記事サムネイル">記事サムネイル<br>（差し替え予定）</div>
+              <div class="article-card__body">
+                <span class="sample-badge">サンプル</span>
+                <p class="article-card__company">サンプル株式会社</p>
+                <p class="article-card__title">ここに公開済み記事のタイトルが入ります</p>
+                <span class="article-card__more">記事を読む<svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="article-card is-todo" href="#" aria-disabled="true">
+              <div class="article-card__thumb" role="img" aria-label="サンプルの記事サムネイル">記事サムネイル<br>（差し替え予定）</div>
+              <div class="article-card__body">
+                <span class="sample-badge">サンプル</span>
+                <p class="article-card__company">サンプル株式会社</p>
+                <p class="article-card__title">ここに公開済み記事のタイトルが入ります</p>
+                <span class="article-card__more">記事を読む<svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="article-card is-todo" href="#" aria-disabled="true">
+              <div class="article-card__thumb" role="img" aria-label="サンプルの記事サムネイル">記事サムネイル<br>（差し替え予定）</div>
+              <div class="article-card__body">
+                <span class="sample-badge">サンプル</span>
+                <p class="article-card__company">サンプル株式会社</p>
+                <p class="article-card__title">ここに公開済み記事のタイトルが入ります</p>
+                <span class="article-card__more">記事を読む<svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="article-card is-todo" href="#" aria-disabled="true">
+              <div class="article-card__thumb" role="img" aria-label="サンプルの記事サムネイル">記事サムネイル<br>（差し替え予定）</div>
+              <div class="article-card__body">
+                <span class="sample-badge">サンプル</span>
+                <p class="article-card__company">サンプル株式会社</p>
+                <p class="article-card__title">ここに公開済み記事のタイトルが入ります</p>
+                <span class="article-card__more">記事を読む<svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== #4 サービス内容と記事企画の例 ===== -->
+  <section class="section section--alt" id="service" aria-labelledby="service-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="section-head__en">Service</p>
+        <h2 class="section-head__title" id="service-title">サービス内容</h2>
+        <p class="section-head__lead">記事で自社の魅力を言葉にし、Instagramで広げ、交流会で学生と直接話す。<br class="pc-only">発信と接点づくりを、1年かけて続けるプログラムです。</p>
+      </div>
+      <ol class="service-list">
+        <li class="service-card service-card--wide reveal">
+          <div class="service-card__main">
+            <span class="service-card__num">01</span>
+            <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="#i-pen"/></svg></span>
+            <h3 class="service-card__title">学生ライターによる取材・記事制作<span class="tag">年2本</span></h3>
+            <p>自社の想いや魅力を、学生の目線で言葉にした記事が手に入ります。記事はココロミーのWebメディアに掲載します。</p>
+          </div>
+          <div class="ideas">
+            <p class="ideas__title">記事企画の例</p>
+            <ul class="ideas__list">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-building"/></svg>学生目線の企業紹介</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-mic"/></svg>若手社員インタビュー</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-eye"/></svg>現場見学レポート</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-utensils"/></svg>学生ライターが、企業の人とランチしてみた</li>
+            </ul>
+            <p class="ideas__note">企画は、企業ごとに学生ライターと一緒に考えます。</p>
+          </div>
+        </li>
+        <li class="service-card reveal">
+          <span class="service-card__num">02</span>
+          <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg></span>
+          <h3 class="service-card__title">Instagram投稿・広告配信<span class="tag">年2回</span></h3>
+          <p>記事と連動した投稿と、ターゲットを絞った広告配信で、記事を学生に向けて広げられます。</p>
+        </li>
+        <li class="service-card reveal">
+          <span class="service-card__num">03</span>
+          <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="#i-monitor"/></svg></span>
+          <h3 class="service-card__title">企業情報の通年掲載</h3>
+          <p>ココロミーの「企業一覧ページ」に1年間掲載。学生がいつでも御社の情報を確認できます。</p>
+        </li>
+        <li class="service-card reveal">
+          <span class="service-card__num">04</span>
+          <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></span>
+          <h3 class="service-card__title">オモモ会<span class="tag">月1回の交流会</span></h3>
+          <p>学生と社会人が気軽につながる場で、会社や仕事のことを学生に直接話せます。</p>
+        </li>
+        <li class="service-card reveal">
+          <span class="service-card__num">05</span>
+          <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="#i-camera"/></svg></span>
+          <h3 class="service-card__title">写真・SNS素材の提供</h3>
+          <p>取材・撮影した写真などの素材を納品します。自社のSNSなどでご活用いただけます。</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- CTA（#4の後） -->
+  <div class="cta-band">
+    <div class="container cta-band__inner reveal">
+      <p class="cta-band__text">内容や進め方について、詳しくご説明します。</p>
+      <a class="btn btn--primary" href="#contact">問い合わせる<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+
+  <!-- ===== #5 ご利用の流れ ===== -->
+  <section class="section" id="flow" aria-labelledby="flow-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="section-head__en">Flow</p>
+        <h2 class="section-head__title" id="flow-title">ご利用の流れ<span class="section-head__sub">（年間サイクル）</span></h2>
+      </div>
+      <ol class="flow reveal">
+        <li class="flow__step">
+          <span class="flow__num">1</span>
+          <svg class="icon flow__icon" aria-hidden="true"><use href="#i-camera"/></svg>
+          <h3>取材</h3>
+          <p>学生ライターが企業・社員の方を取材します。</p>
+        </li>
+        <li class="flow__step">
+          <span class="flow__num">2</span>
+          <svg class="icon flow__icon" aria-hidden="true"><use href="#i-file"/></svg>
+          <h3>記事化</h3>
+          <p>取材内容をWeb記事にまとめて公開します。</p>
+        </li>
+        <li class="flow__step">
+          <span class="flow__num">3</span>
+          <svg class="icon flow__icon" aria-hidden="true"><use href="#i-instagram"/></svg>
+          <h3>Instagramで発信</h3>
+          <p>Instagramへの投稿と広告配信で記事を広げます。</p>
+        </li>
+        <li class="flow__step">
+          <span class="flow__num">4</span>
+          <svg class="icon flow__icon" aria-hidden="true"><use href="#i-message"/></svg>
+          <h3>学生との交流</h3>
+          <p>交流会「オモモ会」で学生と直接話せます。</p>
+        </li>
+      </ol>
+
+      <!-- TODO: 企業側の負担（取材対応の目安時間・記事確認の回数）を入力 -->
+      <div class="burden reveal">
+        <h3 class="burden__title">企業さまにお願いすること</h3>
+        <ul class="burden__list">
+          <li>
+            <svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>
+            <div>
+              <p class="burden__label">取材へのご対応</p>
+              <p class="burden__value">1回あたり 約<span class="todo">【要入力】</span>時間</p>
+            </div>
+          </li>
+          <li>
+            <svg class="icon" aria-hidden="true"><use href="#i-file"/></svg>
+            <div>
+              <p class="burden__label">記事内容のご確認</p>
+              <p class="burden__value">公開前に<span class="todo">【要入力】</span>回</p>
+            </div>
+          </li>
+        </ul>
+        <p class="burden__note">企画の相談から記事公開までの進行は、ココロミーが担当します。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== #6 料金 ===== -->
+  <section class="section section--alt" id="price" aria-labelledby="price-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="section-head__en">Price</p>
+        <h2 class="section-head__title" id="price-title">料金</h2>
+      </div>
+      <div class="price-card reveal">
+        <!-- TODO: 契約条件確定後に「（年間契約）」表記を見直す（lp-spec.md §5-6・§10） -->
+        <p class="price-card__plan">ココロミー企業パートナー（年間契約）</p>
+        <p class="price-card__main">
+          <span class="price-card__label">月額</span>
+          <span class="price-card__num">40,000</span><span class="price-card__unit">円</span>
+          <span class="price-card__tax">（税込）</span>
+        </p>
+        <p class="price-card__total">年間契約の総額 480,000円（税込）</p>
+        <p class="price-card__ad">※ Instagram広告の広告費は、料金とは別にお支払いいただきます。</p>
+
+        <h3 class="price-card__includes-title">料金に含まれる内容</h3>
+        <ul class="includes">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg>年2本の<br>記事制作</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg>年2回の<br>Instagram投稿・広告配信</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-monitor"/></svg>企業情報の<br>通年掲載</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg>月1回の<br>交流会</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-camera"/></svg>写真・画像<br>素材の提供</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg>年1回の<br>レポート</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA（#6の後） -->
+  <div class="cta-band">
+    <div class="container cta-band__inner reveal">
+      <p class="cta-band__text">お見積りや契約条件のご相談も、お気軽にどうぞ。</p>
+      <a class="btn btn--primary" href="#contact">問い合わせる<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+
+  <!-- ===== #7 FAQ ===== -->
+  <section class="section" id="faq" aria-labelledby="faq-title">
+    <div class="container container--narrow">
+      <div class="section-head reveal">
+        <p class="section-head__en">FAQ</p>
+        <h2 class="section-head__title" id="faq-title">よくある質問</h2>
+      </div>
+      <!-- TODO: 回答内容は未確定。確定後に【要入力】を差し替え（lp-spec.md §10） -->
+      <div class="faq reveal">
+        <details class="faq__item">
+          <summary>契約期間はどのくらいですか？<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+          <div class="faq__answer"><p>年間契約です。最低契約期間など詳しい条件は<span class="todo">【要入力】</span>。</p></div>
+        </details>
+        <details class="faq__item">
+          <summary>広告費はどのくらいかかりますか？<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+          <div class="faq__answer"><p>Instagram広告の広告費は、月額料金とは別にお支払いいただきます。目安は<span class="todo">【要入力】</span>。</p></div>
+        </details>
+        <details class="faq__item">
+          <summary>記事は公開前に確認・修正できますか？<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+          <div class="faq__answer"><p><span class="todo">【要入力】</span></p></div>
+        </details>
+        <details class="faq__item">
+          <summary>どのような成果が期待できますか？<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+          <div class="faq__answer"><p>年1回、実施内容をまとめたレポートをお渡しします。レポートでお伝えする項目は<span class="todo">【要入力】</span>。</p></div>
+        </details>
+        <details class="faq__item">
+          <summary>途中で解約できますか？<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+          <div class="faq__answer"><p><span class="todo">【要入力】</span></p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== #8 問い合わせ＋会社情報 ===== -->
+  <section class="section section--alt" id="contact" aria-labelledby="contact-title">
+    <div class="container container--narrow">
+      <div class="section-head reveal">
+        <p class="section-head__en">Contact</p>
+        <h2 class="section-head__title" id="contact-title">お問い合わせ</h2>
+        <p class="section-head__lead">サービスの詳細やお見積りなど、お気軽にご相談ください。</p>
+      </div>
+
+      <!-- フォームはダミー（送信せずに完了表示のみ。送信方式は lp-spec.md §10 で確定後に実装） -->
+      <form class="contact-form" id="contact-form" novalidate>
+        <div class="field">
+          <label for="f-company">会社名<span class="req">必須</span></label>
+          <input id="f-company" name="company" type="text" autocomplete="organization" required>
+          <p class="field__error" id="f-company-error" hidden>会社名を入力してください。</p>
+        </div>
+        <div class="field">
+          <label for="f-name">ご担当者名<span class="req">必須</span></label>
+          <input id="f-name" name="name" type="text" autocomplete="name" required>
+          <p class="field__error" id="f-name-error" hidden>ご担当者名を入力してください。</p>
+        </div>
+        <div class="field">
+          <label for="f-email">メールアドレス<span class="req">必須</span></label>
+          <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required>
+          <p class="field__error" id="f-email-error" hidden>メールアドレスを正しく入力してください。</p>
+        </div>
+        <div class="field">
+          <label for="f-tel">電話番号<span class="opt">任意</span></label>
+          <input id="f-tel" name="tel" type="tel" autocomplete="tel" inputmode="tel">
+        </div>
+        <fieldset class="field">
+          <legend>関心のある内容<span class="opt">複数選択可</span></legend>
+          <div class="checks">
+            <label class="check"><input type="checkbox" name="interest" value="awareness"><span>学生に自社を知ってほしい（認知）</span></label>
+            <label class="check"><input type="checkbox" name="interest" value="voice"><span>学生の声を知りたい</span></label>
+            <label class="check"><input type="checkbox" name="interest" value="event"><span>交流会（オモモ会）</span></label>
+            <label class="check"><input type="checkbox" name="interest" value="article"><span>記事・Instagramでの発信</span></label>
+            <label class="check"><input type="checkbox" name="interest" value="other"><span>その他</span></label>
+          </div>
+        </fieldset>
+        <div class="field">
+          <label for="f-message">ご質問・ご相談内容<span class="opt">任意</span></label>
+          <textarea id="f-message" name="message" rows="5"></textarea>
+        </div>
+        <!-- TODO: プライバシーポリシーのページ／文面を用意してリンク -->
+        <p class="note">ご入力いただいた情報は、お問い合わせへの回答のために使用します。</p>
+        <div class="contact-form__submit">
+          <button class="btn btn--primary btn--lg" type="submit">送信する<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        </div>
+      </form>
+
+      <div class="form-done" id="form-done" hidden tabindex="-1">
+        <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span>
+        <h3>お問い合わせありがとうございます</h3>
+        <p>内容を確認のうえ、担当者よりご連絡いたします。</p>
+        <p class="note">※ 現在はモックのため、実際には送信されていません。</p>
+      </div>
+
+      <!-- TODO: 会社情報（住所・メール・電話）を実データに差し替え -->
+      <div class="company">
+        <h3 class="company__name">株式会社OMOMO</h3>
+        <p class="company__desc">長野の学生メディア「ココロミー」を運営しています。</p>
+        <ul class="company__list">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg><span class="todo">住所【要入力】</span></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg><a href="https://example.com/">https://example.com/</a></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:info@example.com">info@example.com</a></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><span class="todo">電話番号【要入力】</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <p class="site-footer__logo">ココロミー<span>企業パートナー</span></p>
+    <p class="site-footer__copy"><small>&copy; 株式会社OMOMO</small></p>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
