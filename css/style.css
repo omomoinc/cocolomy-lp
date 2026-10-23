@@ -175,16 +175,12 @@ button, input, textarea { font: inherit; color: inherit; }
   font-weight: 900; line-height: 1.4; letter-spacing: .04em;
 }
 .hero__lead { margin-top: 16px; font-size: 16px; }
-.hero__price {
-  margin-top: 20px;
-  display: flex; align-items: baseline; flex-wrap: wrap; gap: 0 .2em;
-  font-weight: 700;
+.hero__values { margin-top: 20px; display: grid; gap: 10px; }
+.hero__values li {
+  display: flex; align-items: flex-start; gap: 10px;
+  font-weight: 700; line-height: 1.6;
 }
-.hero__price-label { font-size: 16px; margin-right: .3em; }
-.hero__price-num { font-size: 40px; font-weight: 900; color: var(--color-green-dark); letter-spacing: .02em; line-height: 1.2; }
-.hero__price-unit { font-size: 20px; color: var(--color-green-dark); }
-.hero__price-tax { font-size: 14px; color: var(--color-text-sub); }
-.hero__price-alt { font-size: 14px; font-weight: 700; color: var(--color-text-sub); }
+.hero__values .icon { width: 24px; height: 24px; color: var(--color-green); margin-top: 1px; }
 .hero__actions { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 12px 16px; }
 
 /* ---------- セクション共通 ---------- */
@@ -601,7 +597,6 @@ button, input, textarea { font: inherit; color: inherit; }
   .hero__visual figcaption { right: 16px; bottom: 16px; }
   .hero__title { font-size: 42px; }
   .hero__lead { font-size: 17px; }
-  .hero__price-num { font-size: 48px; }
 
   .section { padding: 96px 0; }
   .section-head { margin-bottom: 48px; }
