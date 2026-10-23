@@ -73,39 +73,43 @@
         <li><a href="#faq">よくある質問</a></li>
       </ul>
     </nav>
-    <a class="btn btn--primary btn--sm" href="#contact">お問い合わせ</a>
+    <!-- 控えめなリンク（lp-spec.md §5 CTA配置。理由は README「議論ログ」） -->
+    <a class="header-contact" href="#contact">お問い合わせ</a>
   </div>
 </header>
 
 <main id="main">
 
   <!-- ===== #1 ヒーロー ===== -->
+  <!-- 写真を主役にする（2026-10-23 ユーザー指示）。PCは写真を右端まで広げ、スマホは写真を先に見せる -->
   <!-- 背景: assets/images/hero-bg-blur.webp（「名称未設定のデザイン.png」をぼかしたもの。CSSで指定） -->
   <section class="hero" aria-labelledby="hero-title">
-    <div class="container hero__inner">
-      <div class="hero__text">
-        <p class="hero__label">長野の学生メディア「ココロミー」の企業向け年間プログラム</p>
-        <!-- キャッチコピーは案（代案は README「キャッチコピー代案」欄） -->
-        <h1 class="hero__title" id="hero-title"><span class="nowrap">地元企業の名前を、</span><span class="nowrap">長野の学生に届ける。</span></h1>
-        <p class="hero__lead">学生ライターが取材し、WebメディアとInstagramで発信。月1回の交流会「オモモ会」で、学生と直接つながる年間プログラムです。</p>
-        <p class="hero__price">
-          <span class="hero__price-label">月額</span>
-          <span class="hero__price-num">40,000</span><span class="hero__price-unit">円</span>
-          <span class="hero__price-tax">（税込）</span>
-        </p>
-        <div class="hero__actions">
-          <a class="btn btn--primary btn--lg" href="#contact">まずは問い合わせる<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-          <a class="btn btn--ghost" href="#service">サービス内容を見る</a>
-        </div>
-      </div>
+    <div class="hero__inner">
       <figure class="hero__visual">
-        <!-- 元画像: Warm Cafeteria Conversation.png（WebPに変換済み） -->
+        <!-- 暫定画像（公開前に実写へ差し替え。lp-spec.md §4・README 参照）。元画像: Warm Cafeteria Conversation.png -->
         <picture>
           <source media="(max-width: 599px)" srcset="assets/images/hero-cafeteria-sp.webp" width="768" height="512">
           <img src="assets/images/hero-cafeteria.webp" width="1536" height="1024" fetchpriority="high" alt="食堂で学生と社会人がテーブルを囲み、食事をしながら話しているイメージ写真">
         </picture>
         <figcaption>※ 写真はイメージです</figcaption>
       </figure>
+      <div class="hero__text">
+        <p class="hero__label">長野の学生メディア「ココロミー」の企業向け年間プログラム</p>
+        <!-- キャッチコピーは案（代案は README「キャッチコピー代案」欄） -->
+        <h1 class="hero__title" id="hero-title"><span class="nowrap">地元企業の名前を、</span><span class="nowrap">長野の学生に届ける。</span></h1>
+        <p class="hero__lead">学生ライターが取材し、WebメディアとInstagramで発信。月1回の交流会「オモモ会」で、学生と直接つながる年間プログラムです。</p>
+        <!-- TODO: 契約条件が確定したら「年間契約」の表記を見直す（lp-spec.md §5-1） -->
+        <p class="hero__price">
+          <span class="hero__price-label">月額</span>
+          <span class="hero__price-num">40,000</span><span class="hero__price-unit">円</span>
+          <span class="hero__price-tax">（税込）・年間契約</span>
+        </p>
+        <p class="hero__price-alt">年払いなら 400,000円（税込）</p>
+        <!-- ヒーローはスクロール誘導のみ。問い合わせCTAは置かない（README「議論ログ」） -->
+        <div class="hero__actions">
+          <a class="btn btn--primary btn--lg" href="#service">サービス内容を見る<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -125,14 +129,6 @@
       </ul>
     </div>
   </section>
-
-  <!-- CTA（#2の後） -->
-  <div class="cta-band">
-    <div class="container cta-band__inner reveal">
-      <p class="cta-band__text">ひとつでも当てはまったら、まずはお気軽にご相談ください。</p>
-      <a class="btn btn--primary" href="#contact">問い合わせる<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-    </div>
-  </div>
 
   <!-- ===== #3 実績（ココロミーの紹介＋数字＋公開済み記事） ===== -->
   <section class="section" id="results" aria-labelledby="results-title">
@@ -161,15 +157,14 @@
           <svg class="icon stat__icon" aria-hidden="true"><use href="#i-eye"/></svg>
           <span class="stat__label">Webメディアのページビュー</span>
           <span class="stat__value">約1.4万<small>PV</small></span>
-          <!-- TODO: 計測期間の日付を入力（例: 2026年9月1日〜9月28日） -->
-          <span class="stat__note">直近28日間（<span class="todo">【要入力】YYYY年M月D日〜M月D日</span>）の合計</span>
+          <span class="stat__note">直近28日間（2026年9月24日〜10月21日）の合計</span>
         </li>
         <li class="stat">
           <svg class="icon stat__icon" aria-hidden="true"><use href="#i-instagram"/></svg>
           <span class="stat__label">Instagramフォロワー</span>
           <!-- TODO: フォロワーの実数と時点を入力 -->
           <span class="stat__value"><span class="todo">【要入力】</span><small>人</small></span>
-          <!-- TODO: 大学名を載せるか確認中（載せない場合は「県内の大学生」等に調整） -->
+          <!-- 大学名は載せない（2026-10-23 決定） -->
           <span class="stat__note">活動拠点の大学の、1学年の人数を超える規模です。</span>
         </li>
       </ul>
@@ -178,50 +173,45 @@
       <div class="articles reveal">
         <h3 class="articles__title">公開済みの記事</h3>
         <p class="articles__lead">学生ライターが実際に取材・執筆し、ココロミーに掲載した記事です。</p>
-        <!-- TODO: 以下4枚はすべてダミー（サンプル）。公開済み記事3〜4本のURL・タイトル・企業名・サムネイル（OGP画像またはスクリーンショット）に差し替え、
-             .sample-badge と is-todo / aria-disabled を外す。公開前に掲載企業へ一言確認する（README 参照） -->
+        <!-- 公開前に、掲載企業へ一言確認する（README 参照）。サムネイルは assets/images/articles/（800×450 の WebP） -->
         <ul class="article-grid">
           <li>
-            <a class="article-card is-todo" href="#" aria-disabled="true">
-              <div class="article-card__thumb" role="img" aria-label="サンプルの記事サムネイル">記事サムネイル<br>（差し替え予定）</div>
+            <a class="article-card" href="https://cocolomy.com/navi/fpij" target="_blank" rel="noopener">
+              <div class="article-card__thumb"><img src="assets/images/articles/fpij.webp" width="800" height="450" loading="lazy" alt="生活経済研究所長野の講師と学生ライターが話す様子と、オフィスの写真"></div>
               <div class="article-card__body">
-                <span class="sample-badge">サンプル</span>
-                <p class="article-card__company">サンプル株式会社</p>
-                <p class="article-card__title">ここに公開済み記事のタイトルが入ります</p>
-                <span class="article-card__more">記事を読む<svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></span>
+                <p class="article-card__company">生活経済研究所長野</p>
+                <p class="article-card__title">“中立”を武器に、お金の不安に向き合う。生活経済研究所長野の講師という仕事</p>
+                <span class="article-card__more">記事を読む<span class="visually-hidden">（新しいタブで開きます）</span><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></span>
               </div>
             </a>
           </li>
           <li>
-            <a class="article-card is-todo" href="#" aria-disabled="true">
-              <div class="article-card__thumb" role="img" aria-label="サンプルの記事サムネイル">記事サムネイル<br>（差し替え予定）</div>
+            <a class="article-card" href="https://cocolomy.com/navi/shinwakosaku/" target="_blank" rel="noopener">
+              <div class="article-card__thumb"><img src="assets/images/articles/shinwakosaku.webp" width="800" height="450" loading="lazy" alt="伸和工作の社員の集合写真と、工場・製品の写真"></div>
               <div class="article-card__body">
-                <span class="sample-badge">サンプル</span>
-                <p class="article-card__company">サンプル株式会社</p>
-                <p class="article-card__title">ここに公開済み記事のタイトルが入ります</p>
-                <span class="article-card__more">記事を読む<svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></span>
+                <p class="article-card__company">株式会社伸和工作</p>
+                <p class="article-card__title">職人の五感と最新鋭技術が出会う。鋳物の一貫対応で日本のものづくりを支える「伸和工作」の現場を訪ねて</p>
+                <span class="article-card__more">記事を読む<span class="visually-hidden">（新しいタブで開きます）</span><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></span>
               </div>
             </a>
           </li>
           <li>
-            <a class="article-card is-todo" href="#" aria-disabled="true">
-              <div class="article-card__thumb" role="img" aria-label="サンプルの記事サムネイル">記事サムネイル<br>（差し替え予定）</div>
+            <a class="article-card" href="https://cocolomy.com/navi/agematsudenshi/" target="_blank" rel="noopener">
+              <div class="article-card__thumb"><img src="assets/images/articles/agematsudenshi.webp" width="800" height="450" loading="lazy" alt="上松電子の製品、検査作業、社員食堂の写真"></div>
               <div class="article-card__body">
-                <span class="sample-badge">サンプル</span>
-                <p class="article-card__company">サンプル株式会社</p>
-                <p class="article-card__title">ここに公開済み記事のタイトルが入ります</p>
-                <span class="article-card__more">記事を読む<svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></span>
+                <p class="article-card__company">上松電子株式会社</p>
+                <p class="article-card__title">自動車産業を支えるものづくり。その背景には充実した福利厚生と教育体制が！地域に根付いた工場「上松電子」の魅力に迫る！</p>
+                <span class="article-card__more">記事を読む<span class="visually-hidden">（新しいタブで開きます）</span><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></span>
               </div>
             </a>
           </li>
           <li>
-            <a class="article-card is-todo" href="#" aria-disabled="true">
-              <div class="article-card__thumb" role="img" aria-label="サンプルの記事サムネイル">記事サムネイル<br>（差し替え予定）</div>
+            <a class="article-card" href="https://cocolomy.com/navi/ourcar_owner/" target="_blank" rel="noopener">
+              <div class="article-card__thumb"><img src="assets/images/articles/ourcar_owner.webp" width="800" height="450" loading="lazy" alt="カーシェアサービス「OURCAR」のロゴと、車で出かける人たちの写真"></div>
               <div class="article-card__body">
-                <span class="sample-badge">サンプル</span>
-                <p class="article-card__company">サンプル株式会社</p>
-                <p class="article-card__title">ここに公開済み記事のタイトルが入ります</p>
-                <span class="article-card__more">記事を読む<svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></span>
+                <p class="article-card__company">株式会社ＴＲＩＬＬ</p>
+                <p class="article-card__title">カーシェアサービス「OURCAR」ってなに？気になったから、車を貸し出すオーナーになってみた。</p>
+                <span class="article-card__more">記事を読む<span class="visually-hidden">（新しいタブで開きます）</span><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></span>
               </div>
             </a>
           </li>
@@ -359,14 +349,30 @@
         <h2 class="section-head__title" id="price-title">料金</h2>
       </div>
       <div class="price-card reveal">
-        <!-- TODO: 契約条件確定後に「（年間契約）」表記を見直す（lp-spec.md §5-6・§10） -->
+        <!-- 契約は年間。支払いは月払い／年払いを選べる（2026-10-23 ユーザー指示。lp-spec.md §5-6 の総額480,000円より優先） -->
+        <!-- TODO: 契約条件（最低契約期間・途中解約・年払いの支払い時期）が確定したら見直す（lp-spec.md §10） -->
         <p class="price-card__plan">ココロミー企業パートナー（年間契約）</p>
-        <p class="price-card__main">
-          <span class="price-card__label">月額</span>
-          <span class="price-card__num">40,000</span><span class="price-card__unit">円</span>
-          <span class="price-card__tax">（税込）</span>
-        </p>
-        <p class="price-card__total">年間契約の総額 480,000円（税込）</p>
+        <p class="price-card__choose">お支払いは、月払いと年払いから選べます。</p>
+        <ul class="pay-options">
+          <li class="pay-option">
+            <h3 class="pay-option__name">月払い</h3>
+            <p class="pay-option__main">
+              <span class="pay-option__label">月額</span>
+              <span class="pay-option__num">40,000</span><span class="pay-option__unit">円</span>
+              <span class="pay-option__tax">（税込）</span>
+            </p>
+            <p class="pay-option__note">12か月で 480,000円（税込）</p>
+          </li>
+          <li class="pay-option">
+            <h3 class="pay-option__name">年払い</h3>
+            <p class="pay-option__main">
+              <span class="pay-option__label">年額</span>
+              <span class="pay-option__num">400,000</span><span class="pay-option__unit">円</span>
+              <span class="pay-option__tax">（税込）</span>
+            </p>
+            <p class="pay-option__note">月払いの合計より 80,000円少なくなります</p>
+          </li>
+        </ul>
         <p class="price-card__ad">※ Instagram広告の広告費は、料金とは別にお支払いいただきます。</p>
 
         <h3 class="price-card__includes-title">料金に含まれる内容</h3>
@@ -401,7 +407,7 @@
       <div class="faq reveal">
         <details class="faq__item">
           <summary>契約期間はどのくらいですか？<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
-          <div class="faq__answer"><p>年間契約です。最低契約期間など詳しい条件は<span class="todo">【要入力】</span>。</p></div>
+          <div class="faq__answer"><p>年間契約です。お支払いは、月払い（月額40,000円・税込）と年払い（年額400,000円・税込）から選べます。最低契約期間など詳しい条件は<span class="todo">【要入力】</span>。</p></div>
         </details>
         <details class="faq__item">
           <summary>広告費はどのくらいかかりますか？<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
