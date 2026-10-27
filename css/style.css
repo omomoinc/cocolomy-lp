@@ -204,6 +204,17 @@ button, input, textarea { font: inherit; color: inherit; }
 }
 .solution-card__get strong { display: block; font-size: 13px; color: var(--color-green-dark); }
 
+/* ---------- #7 記事の活用方法 ---------- */
+.usage-list { display: grid; gap: 12px; }
+.usage-card {
+  display: grid; grid-template-columns: 56px 1fr; gap: 4px 16px; align-items: start;
+  background: var(--color-white); border-radius: var(--radius-card); box-shadow: var(--shadow-card);
+  padding: 20px;
+}
+.usage-card .icon-badge { grid-row: 1 / span 2; }
+.usage-card__title { font-size: 17px; font-weight: 900; line-height: 1.5; }
+.usage-card p { font-size: 15px; }
+
 /* ---------- セクション共通 ---------- */
 .section { padding: 64px 0; }
 .section--alt { background: var(--color-bg-alt); }
@@ -665,6 +676,7 @@ button, input, textarea { font: inherit; color: inherit; }
   .stats { grid-template-columns: repeat(2, 1fr); max-width: 880px; margin-inline: auto; }
   .solution-list { grid-template-columns: repeat(3, 1fr); }
   .case-card__media { grid-template-columns: repeat(3, 1fr); }
+  .usage-list { grid-template-columns: repeat(2, 1fr); gap: 16px; }
   .case-card { padding: 32px; }
   .article-grid { grid-template-columns: repeat(2, 1fr); }
   .ideas__list { grid-template-columns: repeat(2, 1fr); }
