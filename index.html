@@ -66,7 +66,7 @@
     </a>
     <nav class="global-nav" aria-label="ページ内ナビゲーション">
       <ul>
-        <li><a href="#results">ココロミーの実績</a></li>
+        <li><a href="#results">ココロミーとは</a></li>
         <li><a href="#service">サービス内容</a></li>
         <li><a href="#flow">ご利用の流れ</a></li>
         <li><a href="#price">料金</a></li>
@@ -97,7 +97,9 @@
         <p class="hero__label">長野の学生メディア「ココロミー」の企業向け年間プログラム</p>
         <!-- キャッチコピーは案（代案は README「キャッチコピー代案」欄） -->
         <h1 class="hero__title" id="hero-title"><span class="nowrap">地元企業の名前を、</span><span class="nowrap">長野の学生に届ける。</span></h1>
-        <p class="hero__lead">学生ライターによる取材・発信と、学生との交流会がセットになった年間プログラムです。</p>
+        <!-- 説明文は 2026-10-23 ユーザー指定の文面（「月1回のレポート」は料金の「年1回のレポート」と食い違うため確認中。README 参照） -->
+        <p class="hero__lead hero__lead--strong">学生との一過性でない、持続的な交流の場を設計します。</p>
+        <p class="hero__lead">学生が取材し、学生がコンテンツをWebメディア、Instagramで発信。月1回のレポートや交流会へのご招待で、学生と長期間つながることができます。</p>
         <!-- FVは価値の訴求に絞り、料金は #6 で見せる（2026-10-23 ユーザー指示。README「議論ログ」） -->
         <ul class="hero__values">
           <li><svg class="icon" aria-hidden="true"><use href="#i-pen"/></svg>学生の目線で、自社の魅力を記事に</li>
@@ -116,31 +118,36 @@
   <section class="section section--alt" id="recommend" aria-labelledby="recommend-title">
     <div class="container">
       <div class="section-head reveal">
-        <p class="section-head__en">For you</p>
-        <h2 class="section-head__title" id="recommend-title">こんな企業におすすめです</h2>
+        <p class="section-head__en">Issues</p>
+        <h2 class="section-head__title" id="recommend-title">こんなお悩みはありませんか？</h2>
       </div>
-      <ul class="check-list reveal">
-        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>学生に、もっと自社を知ってほしい</li>
-        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>地域に根ざした企業としてのイメージを発信したい</li>
-        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>若手社員・現場の魅力を伝えたい</li>
-        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>学生と直接つながり、ファンを増やしたい</li>
-        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>学生が何を考えているか、リアルな声を知りたい</li>
+      <!-- 2026-10-23 ユーザー指定の文面。「採用サイト」「採用広報」は lp-spec.md §6 の禁止語を含む（ユーザー指示を優先。README「要件と違う点」） -->
+      <ul class="check-list check-list--issues reveal">
+        <li><svg class="icon" aria-hidden="true"><use href="#i-message"/></svg>学生に自社を知ってもらう機会が少ない</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-message"/></svg>採用サイトだけでは、会社の魅力を十分に伝えきれない</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-message"/></svg>学生のリアルな考えや価値観を知る機会がない</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-message"/></svg>学生と自然に交流できる場がない</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-message"/></svg>SNSや採用広報に取り組みたいが、社内に十分なリソースがない</li>
       </ul>
+      <p class="issues-answer reveal">ココロミー企業パートナーは、こうしたお悩みに向けた年間プログラムです。</p>
     </div>
   </section>
 
-  <!-- ===== #3 実績（ココロミーの紹介＋数字＋公開済み記事） ===== -->
+  <!-- ===== #3 ココロミーとは（紹介＋数字＋公開済み記事） ===== -->
   <section class="section" id="results" aria-labelledby="results-title">
     <div class="container">
       <div class="section-head reveal">
-        <p class="section-head__en">About &amp; Results</p>
-        <h2 class="section-head__title" id="results-title">ココロミーの実績</h2>
+        <p class="section-head__en">About</p>
+        <h2 class="section-head__title" id="results-title">ココロミーとは</h2>
       </div>
       <div class="about reveal">
         <div class="about__text">
-          <p>ココロミーは、長野の大学生が運営する地域密着メディアです。学生の目線で、長野の「人・企業・暮らし」の魅力を取材し、WebメディアとInstagramで発信しています。</p>
+          <!-- 2026-10-23 ユーザー指定の文面。「長野県最大級」は根拠の確認が必要（README 参照） -->
+          <p>ココロミーは、長野県の大学生が運営し、株式会社OMOMOが後援として関わる、長野県最大級の学生向けメディアです。</p>
+          <p>コンテンツは学生目線を意識し、制作は学生が主体となって、編集から投稿までを行っています。</p>
+          <p>各学校の学校祭での出店など、オンラインだけでなく、より深く広い関わりを重視しています。</p>
           <dl class="about__operator">
-            <dt>運営</dt>
+            <dt>後援</dt>
             <dd>株式会社OMOMO</dd>
           </dl>
         </div>
@@ -227,50 +234,114 @@
         <h2 class="section-head__title" id="service-title">サービス内容</h2>
         <p class="section-head__lead">記事で自社の魅力を言葉にし、Instagramで広げ、交流会で学生と直接話す。<br class="pc-only">発信と接点づくりを、1年かけて続けるプログラムです。</p>
       </div>
-      <ol class="service-list">
-        <li class="service-card service-card--wide reveal">
-          <div class="service-card__main">
-            <span class="service-card__num">01</span>
-            <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="#i-pen"/></svg></span>
-            <h3 class="service-card__title">学生ライターによる取材・記事制作<span class="tag">年2本</span></h3>
-            <p>自社の想いや魅力を、学生の目線で言葉にした記事が手に入ります。記事はココロミーのWebメディアに掲載します。</p>
+      <!-- 項目にカーソルを合わせる（スマホはタップ）と、右（スマホは項目の下）に画像と説明が出る。動きは js/main.js -->
+      <p class="service-hint reveal"><span class="pc-only">項目にカーソルを合わせると、</span><span class="sp-only">項目をタップすると、</span>画像と説明が表示されます。</p>
+      <div class="service-tabs reveal">
+        <div class="service-item">
+          <button type="button" class="service-item__btn" id="svc-btn-01" aria-expanded="true" aria-controls="svc-panel-01">
+            <span class="service-item__num">01</span>
+            <span class="service-item__icon"><svg class="icon" aria-hidden="true"><use href="#i-pen"/></svg></span>
+            <span class="service-item__title">学生ライターによる取材・記事制作<span class="tag">年2本</span></span>
+          </button>
+          <div class="service-item__panel" id="svc-panel-01" role="region" aria-labelledby="svc-btn-01">
+            <img class="service-item__img" src="assets/images/articles/shinwakosaku.webp" width="800" height="450" loading="lazy" alt="ココロミーに掲載した記事「伸和工作」のアイキャッチ画像（実際の記事）">
+            <div class="service-item__body">
+              <h3 class="service-item__panel-title">学生ライターによる取材・記事制作</h3>
+              <p>自社の想いや魅力を、学生の目線で言葉にした記事が手に入ります。記事はココロミーのWebメディアに掲載します。</p>
+              <div class="ideas">
+                <p class="ideas__title">記事企画の例</p>
+                <ul class="ideas__list">
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-building"/></svg>学生目線の企業紹介</li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-mic"/></svg>若手社員インタビュー</li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-eye"/></svg>現場見学レポート</li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-utensils"/></svg>学生ライターが、企業の人とランチしてみた</li>
+                </ul>
+                <p class="ideas__note">企画は、企業ごとに学生ライターと一緒に考えます。</p>
+              </div>
+            </div>
           </div>
-          <div class="ideas">
-            <p class="ideas__title">記事企画の例</p>
-            <ul class="ideas__list">
-              <li><svg class="icon" aria-hidden="true"><use href="#i-building"/></svg>学生目線の企業紹介</li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-mic"/></svg>若手社員インタビュー</li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-eye"/></svg>現場見学レポート</li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-utensils"/></svg>学生ライターが、企業の人とランチしてみた</li>
-            </ul>
-            <p class="ideas__note">企画は、企業ごとに学生ライターと一緒に考えます。</p>
+        </div>
+        <div class="service-item">
+          <button type="button" class="service-item__btn" id="svc-btn-02" aria-expanded="false" aria-controls="svc-panel-02">
+            <span class="service-item__num">02</span>
+            <span class="service-item__icon"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg></span>
+            <span class="service-item__title">Instagram投稿・広告配信<span class="tag">年2回</span></span>
+          </button>
+          <div class="service-item__panel" id="svc-panel-02" role="region" aria-labelledby="svc-btn-02">
+            <!-- TODO: サービスの画像に差し替え（assets/images/placeholder/service.svg） -->
+            <img class="service-item__img" src="assets/images/placeholder/service.svg" width="800" height="450" loading="lazy" alt="Instagram投稿のイメージ画像（差し替え予定）">
+            <div class="service-item__body">
+              <h3 class="service-item__panel-title">Instagram投稿・広告配信</h3>
+              <p>記事と連動した投稿と、ターゲットを絞った広告配信で、記事を学生に向けて広げられます。</p>
+            </div>
           </div>
-        </li>
-        <li class="service-card reveal">
-          <span class="service-card__num">02</span>
-          <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg></span>
-          <h3 class="service-card__title">Instagram投稿・広告配信<span class="tag">年2回</span></h3>
-          <p>記事と連動した投稿と、ターゲットを絞った広告配信で、記事を学生に向けて広げられます。</p>
-        </li>
-        <li class="service-card reveal">
-          <span class="service-card__num">03</span>
-          <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="#i-monitor"/></svg></span>
-          <h3 class="service-card__title">企業情報の通年掲載</h3>
-          <p>ココロミーの「企業一覧ページ」に1年間掲載。学生がいつでも御社の情報を確認できます。</p>
-        </li>
-        <li class="service-card reveal">
-          <span class="service-card__num">04</span>
-          <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></span>
-          <h3 class="service-card__title">オモモ会<span class="tag">月1回の交流会</span></h3>
-          <p>学生と社会人が気軽につながる場で、会社や仕事のことを学生に直接話せます。</p>
-        </li>
-        <li class="service-card reveal">
-          <span class="service-card__num">05</span>
-          <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="#i-camera"/></svg></span>
-          <h3 class="service-card__title">写真・SNS素材の提供</h3>
-          <p>取材・撮影した写真などの素材を納品します。自社のSNSなどでご活用いただけます。</p>
-        </li>
-      </ol>
+        </div>
+        <div class="service-item">
+          <button type="button" class="service-item__btn" id="svc-btn-03" aria-expanded="false" aria-controls="svc-panel-03">
+            <span class="service-item__num">03</span>
+            <span class="service-item__icon"><svg class="icon" aria-hidden="true"><use href="#i-monitor"/></svg></span>
+            <span class="service-item__title">企業情報の通年掲載<span class="tag">1年間</span></span>
+          </button>
+          <div class="service-item__panel" id="svc-panel-03" role="region" aria-labelledby="svc-btn-03">
+            <!-- TODO: サービスの画像に差し替え（assets/images/placeholder/service.svg） -->
+            <img class="service-item__img" src="assets/images/placeholder/service.svg" width="800" height="450" loading="lazy" alt="企業一覧ページのイメージ画像（差し替え予定）">
+            <div class="service-item__body">
+              <h3 class="service-item__panel-title">企業情報の通年掲載</h3>
+              <p>ココロミーの「企業一覧ページ」に1年間掲載。学生がいつでも御社の情報を確認できます。</p>
+            </div>
+          </div>
+        </div>
+        <div class="service-item">
+          <button type="button" class="service-item__btn" id="svc-btn-04" aria-expanded="false" aria-controls="svc-panel-04">
+            <span class="service-item__num">04</span>
+            <span class="service-item__icon"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></span>
+            <span class="service-item__title">オモモ会<span class="tag">月1回の交流会</span></span>
+          </button>
+          <div class="service-item__panel" id="svc-panel-04" role="region" aria-labelledby="svc-btn-04">
+            <!-- TODO: サービスの画像に差し替え（assets/images/placeholder/service.svg） -->
+            <img class="service-item__img" src="assets/images/placeholder/service.svg" width="800" height="450" loading="lazy" alt="交流会「オモモ会」のイメージ画像（差し替え予定）">
+            <div class="service-item__body">
+              <h3 class="service-item__panel-title">オモモ会</h3>
+              <p>学生と社会人が気軽につながる場で、会社や仕事のことを学生に直接話せます。</p>
+            </div>
+          </div>
+        </div>
+        <div class="service-item">
+          <button type="button" class="service-item__btn" id="svc-btn-05" aria-expanded="false" aria-controls="svc-panel-05">
+            <span class="service-item__num">05</span>
+            <span class="service-item__icon"><svg class="icon" aria-hidden="true"><use href="#i-camera"/></svg></span>
+            <span class="service-item__title">写真・SNS素材の提供</span>
+          </button>
+          <div class="service-item__panel" id="svc-panel-05" role="region" aria-labelledby="svc-btn-05">
+            <!-- TODO: サービスの画像に差し替え（assets/images/placeholder/service.svg） -->
+            <img class="service-item__img" src="assets/images/placeholder/service.svg" width="800" height="450" loading="lazy" alt="取材で撮影した写真素材のイメージ画像（差し替え予定）">
+            <div class="service-item__body">
+              <h3 class="service-item__panel-title">写真・SNS素材の提供</h3>
+              <p>取材・撮影した写真などの素材を納品します。自社のSNSなどでご活用いただけます。</p>
+            </div>
+          </div>
+        </div>
+        <div class="service-item">
+          <button type="button" class="service-item__btn" id="svc-btn-06" aria-expanded="false" aria-controls="svc-panel-06">
+            <span class="service-item__num">06</span>
+            <span class="service-item__icon"><svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg></span>
+            <span class="service-item__title">年間活動レポート<span class="tag">年1回</span></span>
+          </button>
+          <div class="service-item__panel" id="svc-panel-06" role="region" aria-labelledby="svc-btn-06">
+            <!-- TODO: サービスの画像に差し替え（assets/images/placeholder/service.svg） -->
+            <img class="service-item__img" src="assets/images/placeholder/service.svg" width="800" height="450" loading="lazy" alt="年間活動レポートのイメージ画像（差し替え予定）">
+            <div class="service-item__body">
+              <h3 class="service-item__panel-title">年間活動レポート</h3>
+              <p>1年間の活動を、レポートにまとめてお届けします。</p>
+              <ul class="report-list">
+                <li><strong>数字で見る</strong>公開した記事・Instagram投稿の閲覧数などの数値（トラッキング）</li>
+                <li><strong>声で見る</strong>取材を担当した学生ライターや、交流会で話した学生の感想</li>
+              </ul>
+              <!-- TODO: レポートの具体的な項目（計測する数値・感想の集め方）を確認（lp-spec.md §10） -->
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -286,57 +357,78 @@
   <section class="section" id="flow" aria-labelledby="flow-title">
     <div class="container">
       <div class="section-head reveal">
-        <p class="section-head__en">Flow</p>
-        <h2 class="section-head__title" id="flow-title">ご利用の流れ<span class="section-head__sub">（年間サイクル）</span></h2>
+        <p class="section-head__en">Flow &amp; Schedule</p>
+        <h2 class="section-head__title" id="flow-title">ご利用の流れと年間スケジュール</h2>
+        <p class="section-head__lead">記事と発信は年2回。交流会と企業一覧ページへの掲載は、1年を通して続きます。</p>
       </div>
+
+      <!-- 年間スケジュールの図。PCは横（月が横軸）、スマホは縦（月が縦軸）。時期は例（README 参照） -->
+      <div class="schedule-wrap reveal">
+        <p class="schedule__caption"><span class="sample-badge">例</span>1年間の進み方の一例です。実際の時期は<span class="todo">【要入力】</span></p>
+        <div class="schedule">
+          <span class="schedule__corner" aria-hidden="true"></span>
+          <span class="schedule__month" style="--p:2" aria-hidden="true">1<span class="schedule__month-unit">か月目</span></span>
+          <span class="schedule__month" style="--p:3" aria-hidden="true">2<span class="schedule__month-unit">か月目</span></span>
+          <span class="schedule__month" style="--p:4" aria-hidden="true">3<span class="schedule__month-unit">か月目</span></span>
+          <span class="schedule__month" style="--p:5" aria-hidden="true">4<span class="schedule__month-unit">か月目</span></span>
+          <span class="schedule__month" style="--p:6" aria-hidden="true">5<span class="schedule__month-unit">か月目</span></span>
+          <span class="schedule__month" style="--p:7" aria-hidden="true">6<span class="schedule__month-unit">か月目</span></span>
+          <span class="schedule__month" style="--p:8" aria-hidden="true">7<span class="schedule__month-unit">か月目</span></span>
+          <span class="schedule__month" style="--p:9" aria-hidden="true">8<span class="schedule__month-unit">か月目</span></span>
+          <span class="schedule__month" style="--p:10" aria-hidden="true">9<span class="schedule__month-unit">か月目</span></span>
+          <span class="schedule__month" style="--p:11" aria-hidden="true">10<span class="schedule__month-unit">か月目</span></span>
+          <span class="schedule__month" style="--p:12" aria-hidden="true">11<span class="schedule__month-unit">か月目</span></span>
+          <span class="schedule__month" style="--p:13" aria-hidden="true">12<span class="schedule__month-unit">か月目</span></span>
+          <h3 class="schedule__lane-title schedule__lane-title--1">記事・発信</h3>
+          <span class="schedule__track schedule__track--1" aria-hidden="true"></span>
+          <ol class="schedule__events">
+            <li class="schedule__event" style="--s:2;--e:3"><span class="visually-hidden">1か月目：</span><span class="schedule__event-title"><span class="nowrap">打ち</span><span class="nowrap">合わせ</span></span></li>
+            <li class="schedule__event" style="--s:3;--e:4"><span class="visually-hidden">2か月目：</span><span class="schedule__event-title">取材①</span></li>
+            <li class="schedule__event" style="--s:4;--e:6"><span class="visually-hidden">3〜4か月目：</span><span class="schedule__event-title">記事①公開</span><span class="schedule__event-sub">Instagram投稿・広告①</span></li>
+            <li class="schedule__event" style="--s:8;--e:9"><span class="visually-hidden">7か月目：</span><span class="schedule__event-title">取材②</span></li>
+            <li class="schedule__event" style="--s:9;--e:11"><span class="visually-hidden">8〜9か月目：</span><span class="schedule__event-title">記事②公開</span><span class="schedule__event-sub">Instagram投稿・広告②</span></li>
+            <li class="schedule__event" style="--s:13;--e:14"><span class="visually-hidden">12か月目：</span><span class="schedule__event-title"><span class="nowrap">年間活動</span><span class="nowrap">レポート</span></span></li>
+          </ol>
+          <h3 class="schedule__lane-title schedule__lane-title--2">オモモ会</h3>
+          <p class="schedule__bar schedule__bar--dots"><span>毎月1回、交流会にご招待</span></p>
+          <h3 class="schedule__lane-title schedule__lane-title--3">企業一覧ページ</h3>
+          <p class="schedule__bar schedule__bar--solid"><span>1年間、通年で掲載</span></p>
+        </div>
+      </div>
+
+      <!-- 記事1本ができるまで（企業側の負担を各ステップに明記。lp-spec.md §5-5） -->
+      <h3 class="flow-title reveal">記事1本ができるまで<span class="flow-title__sub">（年2回）</span></h3>
       <ol class="flow reveal">
         <li class="flow__step">
           <span class="flow__num">1</span>
-          <svg class="icon flow__icon" aria-hidden="true"><use href="#i-camera"/></svg>
-          <h3>取材</h3>
-          <p>学生ライターが企業・社員の方を取材します。</p>
+          <svg class="icon flow__icon" aria-hidden="true"><use href="#i-message"/></svg>
+          <h4>打ち合わせ</h4>
+          <p>記事の企画や取材の日程を、学生ライターとご相談します。</p>
         </li>
         <li class="flow__step">
           <span class="flow__num">2</span>
-          <svg class="icon flow__icon" aria-hidden="true"><use href="#i-file"/></svg>
-          <h3>記事化</h3>
-          <p>取材内容をWeb記事にまとめて公開します。</p>
+          <svg class="icon flow__icon" aria-hidden="true"><use href="#i-camera"/></svg>
+          <h4>取材・撮影</h4>
+          <p>学生ライターが企業・社員の方を取材し、写真を撮影します。</p>
+          <!-- TODO: 取材対応の目安時間を入力 -->
+          <p class="flow__burden"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg><span>ご対応: 1回あたり 約<span class="todo">【要入力】</span>時間</span></p>
         </li>
         <li class="flow__step">
           <span class="flow__num">3</span>
-          <svg class="icon flow__icon" aria-hidden="true"><use href="#i-instagram"/></svg>
-          <h3>Instagramで発信</h3>
-          <p>Instagramへの投稿と広告配信で記事を広げます。</p>
+          <svg class="icon flow__icon" aria-hidden="true"><use href="#i-file"/></svg>
+          <h4>原稿のご確認</h4>
+          <p>公開前に、記事の内容をご確認いただきます。</p>
+          <!-- TODO: 記事確認の回数を入力 -->
+          <p class="flow__burden"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg><span>ご対応: 公開前に <span class="todo">【要入力】</span>回</span></p>
         </li>
         <li class="flow__step">
           <span class="flow__num">4</span>
-          <svg class="icon flow__icon" aria-hidden="true"><use href="#i-message"/></svg>
-          <h3>学生との交流</h3>
-          <p>交流会「オモモ会」で学生と直接話せます。</p>
+          <svg class="icon flow__icon" aria-hidden="true"><use href="#i-instagram"/></svg>
+          <h4>公開・発信</h4>
+          <p>Webメディアで公開し、Instagramへの投稿と広告配信で広げます。</p>
         </li>
       </ol>
-
-      <!-- TODO: 企業側の負担（取材対応の目安時間・記事確認の回数）を入力 -->
-      <div class="burden reveal">
-        <h3 class="burden__title">企業さまにお願いすること</h3>
-        <ul class="burden__list">
-          <li>
-            <svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>
-            <div>
-              <p class="burden__label">取材へのご対応</p>
-              <p class="burden__value">1回あたり 約<span class="todo">【要入力】</span>時間</p>
-            </div>
-          </li>
-          <li>
-            <svg class="icon" aria-hidden="true"><use href="#i-file"/></svg>
-            <div>
-              <p class="burden__label">記事内容のご確認</p>
-              <p class="burden__value">公開前に<span class="todo">【要入力】</span>回</p>
-            </div>
-          </li>
-        </ul>
-        <p class="burden__note">企画の相談から記事公開までの進行は、ココロミーが担当します。</p>
-      </div>
+      <p class="flow-note reveal">企画の相談から記事公開までの進行は、ココロミーが担当します。企業さまにお願いするのは、取材へのご対応と原稿のご確認です。</p>
     </div>
   </section>
 
@@ -381,7 +473,7 @@
           <li><svg class="icon" aria-hidden="true"><use href="#i-monitor"/></svg>企業情報の<br>通年掲載</li>
           <li><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg>月1回の<br>交流会</li>
           <li><svg class="icon" aria-hidden="true"><use href="#i-camera"/></svg>写真・画像<br>素材の提供</li>
-          <li><svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg>年1回の<br>レポート</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg>年1回の<br>年間活動レポート</li>
         </ul>
       </div>
     </div>
