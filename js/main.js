@@ -1,10 +1,15 @@
-/* ココロミー企業パートナー LP
+/* 【仮】ココロミー+ LP（サービス名は仮）
    - ヘッダーのスクロール時の影
    - スクロールで要素をふわっと表示
    - 問い合わせフォーム（ダミー送信：実際には送らず完了表示のみ） */
 
 (function () {
   'use strict';
+
+  // サービス名（仮）。ここが定義の場所。決まったらここと、HTML内の「【仮】ココロミー+」を一括置換する
+  // （HTMLにも同じ文字を入れてあるのは、JSが動かない環境や title・OGP でも表示するため）
+  var SERVICE_NAME = '【仮】ココロミー+';
+  document.querySelectorAll('[data-service-name]').forEach(function (el) { el.textContent = SERVICE_NAME; });
 
   // ヘッダー：少しスクロールしたら影をつける
   var header = document.querySelector('.site-header');

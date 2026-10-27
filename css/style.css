@@ -1,5 +1,5 @@
 /* =========================================================
-   ココロミー企業パートナー LP
+   【仮】ココロミー+ LP（サービス名は仮）
    色・角丸などは :root の CSS変数で管理（lp-spec.md §3）
    ========================================================= */
 
@@ -177,13 +177,16 @@ button, input, textarea { font: inherit; color: inherit; }
 }
 .hero__lead { margin-top: 8px; font-size: 16px; }
 .hero__lead--strong { margin-top: 16px; font-size: 18px; font-weight: 700; color: var(--color-green-dark); line-height: 1.6; }
-.hero__values { margin-top: 20px; display: grid; gap: 10px; }
-.hero__values li {
-  display: flex; align-items: flex-start; gap: 10px;
-  font-weight: 700; line-height: 1.6;
-}
-.hero__values .icon { width: 24px; height: 24px; color: var(--color-green); margin-top: 1px; }
+/* 単語レベルのキャッチ（学生取材 / 情報発信 / 交流会） */
+.hero__keywords { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 8px 0; }
+.hero__keywords li { font-size: 20px; font-weight: 900; color: var(--color-green-dark); }
+.hero__keywords li + li::before { content: "／"; margin: 0 .5em; color: var(--color-text-sub); font-weight: 400; }
 .hero__actions { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 12px 16px; }
+
+/* ---------- #2 サービスとは（FVから移した説明文） ---------- */
+.intro { text-align: center; }
+.intro__lead { font-size: clamp(20px, 5vw, 26px); font-weight: 900; line-height: 1.6; color: var(--color-green-dark); }
+.intro__text { max-width: 720px; margin: 16px auto 0; font-size: 16px; }
 
 /* ---------- セクション共通 ---------- */
 .section { padding: 64px 0; }
