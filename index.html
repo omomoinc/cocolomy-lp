@@ -133,13 +133,13 @@
         <p class="section-head__en">Issues</p>
         <h2 class="section-head__title" id="recommend-title">こんなお悩みはありませんか？</h2>
       </div>
-      <!-- 2026-10-23 ユーザー指定の文面。「採用サイト」「採用広報」は lp-spec.md §6 の禁止語を含む（ユーザー指示を優先。README「要件と違う点」） -->
+      <!-- 2026-10-23 ユーザー指定の文面をもとに、2026-10-27 lp-changes.md（採用への訴求は作らない）に合わせて「採用サイト」「採用広報」を言い換えた -->
       <ul class="check-list check-list--issues reveal">
         <li><svg class="icon" aria-hidden="true"><use href="#i-message"/></svg>学生に自社を知ってもらう機会が少ない</li>
-        <li><svg class="icon" aria-hidden="true"><use href="#i-message"/></svg>採用サイトだけでは、会社の魅力を十分に伝えきれない</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-message"/></svg>自社のWebサイトだけでは、会社の魅力を十分に伝えきれない</li>
         <li><svg class="icon" aria-hidden="true"><use href="#i-message"/></svg>学生のリアルな考えや価値観を知る機会がない</li>
         <li><svg class="icon" aria-hidden="true"><use href="#i-message"/></svg>学生と自然に交流できる場がない</li>
-        <li><svg class="icon" aria-hidden="true"><use href="#i-message"/></svg>SNSや採用広報に取り組みたいが、社内に十分なリソースがない</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-message"/></svg>学生向けの広報やSNSに取り組みたいが、社内に十分なリソースがない</li>
       </ul>
       <p class="issues-answer reveal"><span data-service-name>【仮】ココロミー+</span>は、こうしたお悩みに向けた年間プログラムです。</p>
     </div>
@@ -186,8 +186,30 @@
       <div class="section-head reveal">
         <p class="section-head__en">Details</p>
         <h2 class="section-head__title" id="service-title">サービス内容の詳細</h2>
-        <p class="section-head__lead">記事で自社の魅力を言葉にし、Instagramで広げ、交流会で学生と直接話す。<br class="pc-only">発信と接点づくりを、1年かけて続けるプログラムです。</p>
+        <p class="section-head__lead">学生が記事で自社の魅力を言葉にし、ココロミーのInstagramで紹介し、交流会で学生と直接話す。<br class="pc-only">発信と出会いを、1年かけて続けるプログラムです。</p>
       </div>
+
+      <!-- 強み（どうつくるか）と手段（どこで・何で届けるか）を分けて示す（2026-10-27 lp-changes.md §7）。TODO: 本文は仮文 -->
+      <div class="strengths reveal">
+        <h3 class="sub-title">ココロミーの強み</h3>
+        <ul class="strength-list">
+          <li class="strength-card">
+            <h4 class="strength-card__title">学生目線</h4>
+            <p>書き手は学生ライター。学生が気になること、学生に伝わる言葉を大切にして記事をつくります。</p>
+          </li>
+          <li class="strength-card">
+            <h4 class="strength-card__title">企画力</h4>
+            <p>記事の切り口は、企業ごとに学生ライターと一緒に考えます。企業紹介、インタビュー、現場レポートなど、伝えたいことに合わせて企画します。</p>
+          </li>
+          <li class="strength-card">
+            <!-- TODO: デザイン（アイキャッチ画像など）を誰がどこまで制作するか確認 -->
+            <h4 class="strength-card__title">デザイン力</h4>
+            <p>記事のアイキャッチ画像など、学生の目に留まる見せ方まで含めてつくります。</p>
+          </li>
+        </ul>
+      </div>
+
+      <h3 class="sub-title sub-title--means reveal">手段（媒体・交流会）</h3>
       <!-- 項目にカーソルを合わせる（スマホはタップ）と、右（スマホは項目の下）に画像と説明が出る。動きは js/main.js -->
       <p class="service-hint reveal"><span class="pc-only">項目にカーソルを合わせると、</span><span class="sp-only">項目をタップすると、</span>画像と説明が表示されます。</p>
       <div class="service-tabs reveal">
@@ -201,7 +223,8 @@
             <img class="service-item__img" src="assets/images/articles/shinwakosaku.webp" width="800" height="450" loading="lazy" alt="ココロミーに掲載した記事「伸和工作」のアイキャッチ画像（実際の記事）">
             <div class="service-item__body">
               <h3 class="service-item__panel-title">学生ライターによる取材・記事制作</h3>
-              <p>自社の想いや魅力を、学生の目線で言葉にした記事が手に入ります。記事はココロミーのWebメディアに掲載します。</p>
+              <!-- TODO: 説明文は仮文 -->
+              <p>学生ライターが経営者や社員の方を取材し、学生が「知りたい」と感じたことを起点に、仕事の中身や会社の考え方を、学生の目線と言葉で記事にまとめます。記事はココロミーのWebメディアに掲載します。</p>
               <div class="ideas">
                 <p class="ideas__title">記事企画の例</p>
                 <ul class="ideas__list">
@@ -219,14 +242,16 @@
           <button type="button" class="service-item__btn" id="svc-btn-02" aria-expanded="false" aria-controls="svc-panel-02">
             <span class="service-item__num">02</span>
             <span class="service-item__icon"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg></span>
-            <span class="service-item__title">Instagram投稿・広告配信<span class="tag">年2回</span></span>
+            <span class="service-item__title">ココロミーのInstagramに掲載<span class="tag">年2回</span></span>
           </button>
           <div class="service-item__panel" id="svc-panel-02" role="region" aria-labelledby="svc-btn-02">
             <!-- TODO: サービスの画像に差し替え（assets/images/placeholder/service.svg） -->
-            <img class="service-item__img" src="assets/images/placeholder/service.svg" width="800" height="450" loading="lazy" alt="Instagram投稿のイメージ画像（差し替え予定）">
+            <img class="service-item__img" src="assets/images/placeholder/service.svg" width="800" height="450" loading="lazy" alt="ココロミーのInstagramに掲載した投稿のイメージ画像（差し替え予定）">
             <div class="service-item__body">
-              <h3 class="service-item__panel-title">Instagram投稿・広告配信</h3>
-              <p>記事と連動した投稿と、ターゲットを絞った広告配信で、記事を学生に向けて広げられます。</p>
+              <h3 class="service-item__panel-title">ココロミーのInstagramに掲載</h3>
+              <!-- TODO: 説明文は仮文 -->
+              <p>公開した記事の内容を、ココロミーのInstagramアカウントで紹介します。あわせて、学生に向けたInstagram広告を配信します（広告費は別途）。</p>
+              <p>御社のInstagramアカウントを運用するサービスではありません。</p>
             </div>
           </div>
         </div>
@@ -241,7 +266,8 @@
             <img class="service-item__img" src="assets/images/placeholder/service.svg" width="800" height="450" loading="lazy" alt="企業一覧ページのイメージ画像（差し替え予定）">
             <div class="service-item__body">
               <h3 class="service-item__panel-title">企業情報の通年掲載</h3>
-              <p>ココロミーの「企業一覧ページ」に1年間掲載。学生がいつでも御社の情報を確認できます。</p>
+              <!-- TODO: 説明文は仮文 -->
+              <p>ココロミーの「企業一覧ページ」に、御社の情報を1年間掲載します。記事を読んで興味を持った学生が、あとから御社のことを確かめられる場所になります。</p>
             </div>
           </div>
         </div>
@@ -256,7 +282,9 @@
             <img class="service-item__img" src="assets/images/placeholder/service.svg" width="800" height="450" loading="lazy" alt="交流会「オモモ会」のイメージ画像（差し替え予定）">
             <div class="service-item__body">
               <h3 class="service-item__panel-title">オモモ会</h3>
-              <p>学生と社会人が気軽につながる場で、会社や仕事のことを学生に直接話せます。</p>
+              <!-- TODO: 説明文は仮文 -->
+              <p>学生と社会人が気軽に集まる、月1回の交流会にご招待します。かしこまった場ではなく、仕事のことや学生の考えを、気軽に話せる場です。</p>
+              <p>記事を読んだ学生と、実際に顔を合わせて話す機会にもなります。</p>
             </div>
           </div>
         </div>
@@ -271,7 +299,8 @@
             <img class="service-item__img" src="assets/images/placeholder/service.svg" width="800" height="450" loading="lazy" alt="取材で撮影した写真素材のイメージ画像（差し替え予定）">
             <div class="service-item__body">
               <h3 class="service-item__panel-title">写真・SNS素材の提供</h3>
-              <p>取材・撮影した写真などの素材を納品します。自社のSNSなどでご活用いただけます。</p>
+              <!-- TODO: 説明文は仮文。素材の利用範囲を確認 -->
+              <p>取材のときに撮影した写真などの素材を納品します。自社のSNSや社内資料などでご活用いただけます。</p>
             </div>
           </div>
         </div>
@@ -288,7 +317,7 @@
               <h3 class="service-item__panel-title">年間活動レポート</h3>
               <p>1年間の活動を、レポートにまとめてお届けします。</p>
               <ul class="report-list">
-                <li><strong>数字で見る</strong>公開した記事・Instagram投稿の閲覧数などの数値（トラッキング）</li>
+                <li><strong>数字で見る</strong>公開した記事・ココロミーのInstagram投稿の閲覧数などの数値（トラッキング）</li>
                 <li><strong>声で見る</strong>取材を担当した学生ライターや、交流会で話した学生の感想</li>
               </ul>
               <!-- TODO: レポートの具体的な項目（計測する数値・感想の集め方）を確認（lp-spec.md §10） -->
@@ -335,7 +364,7 @@
       <!-- 差し替え方: 各 <img> の src を実写（assets/images/cases/ など）に、alt を内容に合わせて変える。企業の声は、いただいたコメントをそのまま載せる（盛らない） -->
       <div class="case reveal">
         <h3 class="sub-title">取り組みの事例</h3>
-        <p class="sub-lead">記事の掲載だけでなく、Instagramへの掲載、交流会での学生との出会いまで、1年間の取り組み全体をご紹介します。</p>
+        <p class="sub-lead">記事の掲載だけでなく、ココロミーのInstagramへの掲載、交流会での学生との出会いまで、1年間の取り組み全体をご紹介します。</p>
         <article class="case-card">
           <header class="case-card__head">
             <span class="sample-badge">サンプル</span>
@@ -553,7 +582,7 @@
           <span class="flow__num">4</span>
           <svg class="icon flow__icon" aria-hidden="true"><use href="#i-instagram"/></svg>
           <h4>公開・発信</h4>
-          <p>Webメディアで公開し、Instagramへの投稿と広告配信で広げます。</p>
+          <p>ココロミーのWebメディアで公開し、ココロミーのInstagramでも紹介します。</p>
         </li>
       </ol>
       <p class="flow-note reveal">企画の相談から記事公開までの進行は、ココロミーが担当します。企業さまにお願いするのは、取材へのご対応と原稿のご確認です。</p>
@@ -691,7 +720,7 @@
             <label class="check"><input type="checkbox" name="interest" value="awareness"><span>学生に自社を知ってほしい（認知）</span></label>
             <label class="check"><input type="checkbox" name="interest" value="voice"><span>学生の声を知りたい</span></label>
             <label class="check"><input type="checkbox" name="interest" value="event"><span>交流会（オモモ会）</span></label>
-            <label class="check"><input type="checkbox" name="interest" value="article"><span>記事・Instagramでの発信</span></label>
+            <label class="check"><input type="checkbox" name="interest" value="article"><span>記事・ココロミーのInstagramへの掲載</span></label>
             <label class="check"><input type="checkbox" name="interest" value="other"><span>その他</span></label>
           </div>
         </fieldset>
