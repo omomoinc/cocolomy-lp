@@ -188,6 +188,22 @@ button, input, textarea { font: inherit; color: inherit; }
 .intro__lead { font-size: clamp(20px, 5vw, 26px); font-weight: 900; line-height: 1.6; color: var(--color-green-dark); }
 .intro__text { max-width: 720px; margin: 16px auto 0; font-size: 16px; }
 
+/* ---------- #4 ソリューション（3つを同列に） ---------- */
+.solution-list { display: grid; gap: 16px; }
+.solution-card {
+  display: flex; flex-direction: column; gap: 8px;
+  background: var(--color-white); border-radius: var(--radius-card); box-shadow: var(--shadow-card);
+  padding: 28px 24px;
+}
+.solution-card__title { font-size: 19px; font-weight: 900; line-height: 1.5; margin-top: 8px; }
+.solution-card__tag { font-size: 13px; font-weight: 700; color: var(--color-green-dark); }
+.solution-card > p:not([class]) { font-size: 15px; }
+.solution-card__get {
+  margin-top: auto; padding-top: 14px; border-top: 1px solid var(--color-line);
+  font-size: 15px;
+}
+.solution-card__get strong { display: block; font-size: 13px; color: var(--color-green-dark); }
+
 /* ---------- セクション共通 ---------- */
 .section { padding: 64px 0; }
 .section--alt { background: var(--color-bg-alt); }
@@ -260,18 +276,8 @@ button, input, textarea { font: inherit; color: inherit; }
 }
 .cta-band__text { font-weight: 700; }
 
-/* ---------- #3 ココロミーとは ---------- */
-.about { display: grid; gap: 24px; align-items: center; }
-.about__text p + p { margin-top: 12px; }
-.about__operator {
-  display: inline-flex; gap: 12px; align-items: center; margin-top: 16px;
-  background: var(--color-green-pale); border-radius: var(--radius-sm); padding: 8px 16px;
-}
-.about__operator dt { font-size: 13px; font-weight: 700; color: var(--color-green-dark); }
-.about__operator dd { font-weight: 700; }
-.about__visual img { border-radius: var(--radius-card); width: 100%; }
-
-.stats { margin-top: 32px; display: grid; gap: 12px; }
+/* ---------- #6 事例・実績 ---------- */
+.stats { margin-top: 0; display: grid; gap: 12px; }
 .stat {
   background: var(--color-white); border-radius: var(--radius-card); box-shadow: var(--shadow-card);
   padding: 24px 16px; text-align: center;
@@ -633,6 +639,7 @@ button, input, textarea { font: inherit; color: inherit; }
 @media (min-width: 600px) {
   :root { --gutter: 32px; }
   .stats { grid-template-columns: repeat(2, 1fr); max-width: 880px; margin-inline: auto; }
+  .solution-list { grid-template-columns: repeat(3, 1fr); }
   .article-grid { grid-template-columns: repeat(2, 1fr); }
   .ideas__list { grid-template-columns: repeat(2, 1fr); }
   .includes { grid-template-columns: repeat(3, 1fr); }
@@ -682,8 +689,6 @@ button, input, textarea { font: inherit; color: inherit; }
   .section { padding: 96px 0; }
   .section-head { margin-bottom: 48px; }
 
-  .about { grid-template-columns: 1.2fr 1fr; gap: 48px; }
-  .about__text p { font-size: 17px; }
 
   .article-grid { grid-template-columns: repeat(4, 1fr); }
   /* サービス内容: 左にボタン、右にパネル（JSがあるときだけ。JSなしは縦に全部表示） */

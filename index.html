@@ -68,8 +68,9 @@
     </a>
     <nav class="global-nav" aria-label="ページ内ナビゲーション">
       <ul>
-        <li><a href="#results">ココロミーとは</a></li>
-        <li><a href="#service">サービス内容</a></li>
+        <li><a href="#intro">サービスとは</a></li>
+        <li><a href="#solution">できること</a></li>
+        <li><a href="#results">事例・実績</a></li>
         <li><a href="#flow">ご利用の流れ</a></li>
         <li><a href="#price">料金</a></li>
         <li><a href="#faq">よくある質問</a></li>
@@ -144,105 +145,47 @@
     </div>
   </section>
 
-  <!-- ===== #3 ココロミーとは（紹介＋数字＋公開済み記事） ===== -->
-  <section class="section" id="results" aria-labelledby="results-title">
+  <!-- ===== #4 ソリューション（新規）。ココロミー／Instagram／オモモ会を同列に並べる（2026-10-27 lp-changes.md §2） ===== -->
+  <!-- 説明文は仮文（TODO: 文面を確定） -->
+  <section class="section" id="solution" aria-labelledby="solution-title">
     <div class="container">
       <div class="section-head reveal">
-        <p class="section-head__en">About</p>
-        <h2 class="section-head__title" id="results-title">ココロミーとは</h2>
+        <p class="section-head__en">Solution</p>
+        <h2 class="section-head__title" id="solution-title"><span data-service-name>【仮】ココロミー+</span>でできること</h2>
+        <p class="section-head__lead">オンライン（記事・Instagram）とオフライン（交流会）を組み合わせて、学生との関係を1年かけてつくります。</p>
       </div>
-      <div class="about reveal">
-        <div class="about__text">
-          <!-- 2026-10-23 ユーザー指定の文面。「長野県最大級」は根拠の確認が必要（README 参照） -->
-          <p>ココロミーは、長野県の大学生が運営し、株式会社OMOMOが後援として関わる、長野県最大級の学生向けメディアです。</p>
-          <p>コンテンツは学生目線を意識し、制作は学生が主体となって、編集から投稿までを行っています。</p>
-          <p>各学校の学校祭での出店など、オンラインだけでなく、より深く広い関わりを重視しています。</p>
-          <dl class="about__operator">
-            <dt>後援</dt>
-            <dd>株式会社OMOMO</dd>
-          </dl>
-        </div>
-        <div class="about__visual">
-          <!-- TODO: AI生成イラストに差し替え（推奨: assets/images/about.webp） -->
-          <img src="assets/images/placeholder/about.svg" width="480" height="360" loading="lazy" alt="ココロミーの学生ライターが記事を書いている様子のイラスト（差し替え予定）">
-        </div>
-      </div>
-
-      <!-- 数字（lp-spec.md §5-3・§6 の表記ルールに従う。PVは28日間の値なので期間を必ず併記） -->
-      <ul class="stats reveal">
-        <li class="stat">
-          <svg class="icon stat__icon" aria-hidden="true"><use href="#i-eye"/></svg>
-          <span class="stat__label">Webメディアのページビュー</span>
-          <span class="stat__value">約1.4万<small>PV</small></span>
-          <span class="stat__note">直近28日間（2026年9月24日〜10月21日）の合計</span>
+      <ul class="solution-list reveal">
+        <li class="solution-card">
+          <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="#i-pen"/></svg></span>
+          <h3 class="solution-card__title">ココロミーに記事を掲載</h3>
+          <p class="solution-card__tag">年2本</p>
+          <p>学生ライターが御社を取材し、学生の目線で書いた記事を、学生メディア「ココロミー」に掲載します。</p>
+          <p class="solution-card__get"><strong>得られるもの</strong>学生が書いた記事と、取材で撮影した写真。社内でも共有できます。</p>
         </li>
-        <li class="stat">
-          <svg class="icon stat__icon" aria-hidden="true"><use href="#i-instagram"/></svg>
-          <span class="stat__label">Instagramフォロワー</span>
-          <!-- TODO: フォロワーの実数と時点を入力 -->
-          <span class="stat__value"><span class="todo">【要入力】</span><small>人</small></span>
-          <!-- 大学名は載せない（2026-10-23 決定） -->
-          <span class="stat__note">活動拠点の大学の、1学年の人数を超える規模です。</span>
+        <li class="solution-card">
+          <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg></span>
+          <h3 class="solution-card__title">ココロミーのInstagramに掲載</h3>
+          <p class="solution-card__tag">年2回</p>
+          <p>記事の内容を、ココロミーのInstagramアカウントで紹介します。御社のアカウントを運用するサービスではありません。</p>
+          <p class="solution-card__get"><strong>得られるもの</strong>記事を、Instagramを見ている学生の目に触れる場所へ。</p>
+        </li>
+        <li class="solution-card">
+          <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></span>
+          <h3 class="solution-card__title">交流会「オモモ会」</h3>
+          <p class="solution-card__tag">月1回</p>
+          <p>学生と社会人が気軽に集まる交流会に、毎月ご招待します。</p>
+          <p class="solution-card__get"><strong>得られるもの</strong>学生と直接会って話し、考えや価値観を聞く機会。</p>
         </li>
       </ul>
-
-      <!-- 公開済み記事カード -->
-      <div class="articles reveal">
-        <h3 class="articles__title">公開済みの記事</h3>
-        <p class="articles__lead">学生ライターが実際に取材・執筆し、ココロミーに掲載した記事です。</p>
-        <!-- 公開前に、掲載企業へ一言確認する（README 参照）。サムネイルは assets/images/articles/（800×450 の WebP） -->
-        <ul class="article-grid">
-          <li>
-            <a class="article-card" href="https://cocolomy.com/navi/fpij" target="_blank" rel="noopener">
-              <div class="article-card__thumb"><img src="assets/images/articles/fpij.webp" width="800" height="450" loading="lazy" alt="生活経済研究所長野の講師と学生ライターが話す様子と、オフィスの写真"></div>
-              <div class="article-card__body">
-                <p class="article-card__company">生活経済研究所長野</p>
-                <p class="article-card__title">“中立”を武器に、お金の不安に向き合う。生活経済研究所長野の講師という仕事</p>
-                <span class="article-card__more">記事を読む<span class="visually-hidden">（新しいタブで開きます）</span><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a class="article-card" href="https://cocolomy.com/navi/shinwakosaku/" target="_blank" rel="noopener">
-              <div class="article-card__thumb"><img src="assets/images/articles/shinwakosaku.webp" width="800" height="450" loading="lazy" alt="伸和工作の社員の集合写真と、工場・製品の写真"></div>
-              <div class="article-card__body">
-                <p class="article-card__company">株式会社伸和工作</p>
-                <p class="article-card__title">職人の五感と最新鋭技術が出会う。鋳物の一貫対応で日本のものづくりを支える「伸和工作」の現場を訪ねて</p>
-                <span class="article-card__more">記事を読む<span class="visually-hidden">（新しいタブで開きます）</span><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a class="article-card" href="https://cocolomy.com/navi/agematsudenshi/" target="_blank" rel="noopener">
-              <div class="article-card__thumb"><img src="assets/images/articles/agematsudenshi.webp" width="800" height="450" loading="lazy" alt="上松電子の製品、検査作業、社員食堂の写真"></div>
-              <div class="article-card__body">
-                <p class="article-card__company">上松電子株式会社</p>
-                <p class="article-card__title">自動車産業を支えるものづくり。その背景には充実した福利厚生と教育体制が！地域に根付いた工場「上松電子」の魅力に迫る！</p>
-                <span class="article-card__more">記事を読む<span class="visually-hidden">（新しいタブで開きます）</span><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a class="article-card" href="https://cocolomy.com/navi/ourcar_owner/" target="_blank" rel="noopener">
-              <div class="article-card__thumb"><img src="assets/images/articles/ourcar_owner.webp" width="800" height="450" loading="lazy" alt="カーシェアサービス「OURCAR」のロゴと、車で出かける人たちの写真"></div>
-              <div class="article-card__body">
-                <p class="article-card__company">株式会社ＴＲＩＬＬ</p>
-                <p class="article-card__title">カーシェアサービス「OURCAR」ってなに？気になったから、車を貸し出すオーナーになってみた。</p>
-                <span class="article-card__more">記事を読む<span class="visually-hidden">（新しいタブで開きます）</span><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></span>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </div>
     </div>
   </section>
 
-  <!-- ===== #4 サービス内容と記事企画の例 ===== -->
+  <!-- ===== #5 サービス内容の詳細 ===== -->
   <section class="section section--alt" id="service" aria-labelledby="service-title">
     <div class="container">
       <div class="section-head reveal">
-        <p class="section-head__en">Service</p>
-        <h2 class="section-head__title" id="service-title">サービス内容</h2>
+        <p class="section-head__en">Details</p>
+        <h2 class="section-head__title" id="service-title">サービス内容の詳細</h2>
         <p class="section-head__lead">記事で自社の魅力を言葉にし、Instagramで広げ、交流会で学生と直接話す。<br class="pc-only">発信と接点づくりを、1年かけて続けるプログラムです。</p>
       </div>
       <!-- 項目にカーソルを合わせる（スマホはタップ）と、右（スマホは項目の下）に画像と説明が出る。動きは js/main.js -->
@@ -356,15 +299,83 @@
     </div>
   </section>
 
-  <!-- CTA（#4の後） -->
-  <div class="cta-band">
-    <div class="container cta-band__inner reveal">
-      <p class="cta-band__text">内容や進め方について、詳しくご説明します。</p>
-      <a class="btn btn--primary" href="#contact">問い合わせる<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-    </div>
-  </div>
+  <!-- ===== #6 事例・実績（数字＋公開済み記事）。「ココロミーとは」単独の紹介は削除（2026-10-27 lp-changes.md §2） ===== -->
+  <section class="section" id="results" aria-labelledby="results-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="section-head__en">Results</p>
+        <h2 class="section-head__title" id="results-title">事例・実績</h2>
+      </div>
+      <!-- 数字（lp-spec.md §5-3・§6 の表記ルールに従う。PVは28日間の値なので期間を必ず併記） -->
+      <ul class="stats reveal">
+        <li class="stat">
+          <svg class="icon stat__icon" aria-hidden="true"><use href="#i-eye"/></svg>
+          <span class="stat__label">Webメディアのページビュー</span>
+          <span class="stat__value">約1.4万<small>PV</small></span>
+          <span class="stat__note">直近28日間（2026年9月24日〜10月21日）の合計</span>
+        </li>
+        <li class="stat">
+          <svg class="icon stat__icon" aria-hidden="true"><use href="#i-instagram"/></svg>
+          <span class="stat__label">Instagramフォロワー</span>
+          <!-- TODO: フォロワーの実数と時点を入力 -->
+          <span class="stat__value"><span class="todo">【要入力】</span><small>人</small></span>
+          <!-- 大学名は載せない（2026-10-23 決定） -->
+          <span class="stat__note">活動拠点の大学の、1学年の人数を超える規模です。</span>
+        </li>
+      </ul>
 
-  <!-- ===== #5 ご利用の流れ ===== -->
+      <!-- 公開済み記事カード -->
+      <div class="articles reveal">
+        <h3 class="articles__title">公開済みの記事</h3>
+        <p class="articles__lead">学生ライターが実際に取材・執筆し、ココロミーに掲載した記事です。</p>
+        <!-- 公開前に、掲載企業へ一言確認する（README 参照）。サムネイルは assets/images/articles/（800×450 の WebP） -->
+        <ul class="article-grid">
+          <li>
+            <a class="article-card" href="https://cocolomy.com/navi/fpij" target="_blank" rel="noopener">
+              <div class="article-card__thumb"><img src="assets/images/articles/fpij.webp" width="800" height="450" loading="lazy" alt="生活経済研究所長野の講師と学生ライターが話す様子と、オフィスの写真"></div>
+              <div class="article-card__body">
+                <p class="article-card__company">生活経済研究所長野</p>
+                <p class="article-card__title">“中立”を武器に、お金の不安に向き合う。生活経済研究所長野の講師という仕事</p>
+                <span class="article-card__more">記事を読む<span class="visually-hidden">（新しいタブで開きます）</span><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="article-card" href="https://cocolomy.com/navi/shinwakosaku/" target="_blank" rel="noopener">
+              <div class="article-card__thumb"><img src="assets/images/articles/shinwakosaku.webp" width="800" height="450" loading="lazy" alt="伸和工作の社員の集合写真と、工場・製品の写真"></div>
+              <div class="article-card__body">
+                <p class="article-card__company">株式会社伸和工作</p>
+                <p class="article-card__title">職人の五感と最新鋭技術が出会う。鋳物の一貫対応で日本のものづくりを支える「伸和工作」の現場を訪ねて</p>
+                <span class="article-card__more">記事を読む<span class="visually-hidden">（新しいタブで開きます）</span><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="article-card" href="https://cocolomy.com/navi/agematsudenshi/" target="_blank" rel="noopener">
+              <div class="article-card__thumb"><img src="assets/images/articles/agematsudenshi.webp" width="800" height="450" loading="lazy" alt="上松電子の製品、検査作業、社員食堂の写真"></div>
+              <div class="article-card__body">
+                <p class="article-card__company">上松電子株式会社</p>
+                <p class="article-card__title">自動車産業を支えるものづくり。その背景には充実した福利厚生と教育体制が！地域に根付いた工場「上松電子」の魅力に迫る！</p>
+                <span class="article-card__more">記事を読む<span class="visually-hidden">（新しいタブで開きます）</span><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="article-card" href="https://cocolomy.com/navi/ourcar_owner/" target="_blank" rel="noopener">
+              <div class="article-card__thumb"><img src="assets/images/articles/ourcar_owner.webp" width="800" height="450" loading="lazy" alt="カーシェアサービス「OURCAR」のロゴと、車で出かける人たちの写真"></div>
+              <div class="article-card__body">
+                <p class="article-card__company">株式会社ＴＲＩＬＬ</p>
+                <p class="article-card__title">カーシェアサービス「OURCAR」ってなに？気になったから、車を貸し出すオーナーになってみた。</p>
+                <span class="article-card__more">記事を読む<span class="visually-hidden">（新しいタブで開きます）</span><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== #8 ご利用の流れ ===== -->
   <section class="section" id="flow" aria-labelledby="flow-title">
     <div class="container">
       <div class="section-head reveal">
@@ -443,7 +454,7 @@
     </div>
   </section>
 
-  <!-- ===== #6 料金 ===== -->
+  <!-- ===== #9 料金 ===== -->
   <section class="section section--alt" id="price" aria-labelledby="price-title">
     <div class="container">
       <div class="section-head reveal">
@@ -490,7 +501,7 @@
     </div>
   </section>
 
-  <!-- CTA（#6の後） -->
+  <!-- CTA（#9 料金の後） -->
   <div class="cta-band">
     <div class="container cta-band__inner reveal">
       <p class="cta-band__text">お見積りや契約条件のご相談も、お気軽にどうぞ。</p>
@@ -498,7 +509,7 @@
     </div>
   </div>
 
-  <!-- ===== #7 FAQ ===== -->
+  <!-- ===== #10 FAQ ===== -->
   <section class="section" id="faq" aria-labelledby="faq-title">
     <div class="container container--narrow">
       <div class="section-head reveal">
@@ -531,7 +542,7 @@
     </div>
   </section>
 
-  <!-- ===== #8 問い合わせ＋会社情報 ===== -->
+  <!-- ===== #11 問い合わせ＋会社情報 ===== -->
   <section class="section section--alt" id="contact" aria-labelledby="contact-title">
     <div class="container container--narrow">
       <div class="section-head reveal">
