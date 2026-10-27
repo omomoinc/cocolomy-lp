@@ -418,61 +418,50 @@ button, input, textarea { font: inherit; color: inherit; }
 .ideas__note { margin-top: 10px; font-size: 13px; color: var(--color-text-sub); }
 
 /* ---------- #5 ご利用の流れと年間スケジュール ---------- */
-/* 年間スケジュールの図。スマホは縦（月が行）、PCは横（月が列）。位置は style の --p（月）/--s・--e（開始・終了の線番号） */
-.schedule-wrap {
+/* 年間スケジュール（ストック型）: 各行は「ラベル＋12か月」のグリッド。帯は開始月（--s）から右端まで伸び、右端は矢印 */
+.stock-wrap {
   background: var(--color-white); border-radius: var(--radius-card); box-shadow: var(--shadow-card);
-  padding: 20px 14px;
+  padding: 20px 16px;
 }
 .schedule__caption { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: 14px; color: var(--color-text-sub); margin-bottom: 16px; }
-.schedule {
-  display: grid;
-  grid-template-columns: 52px minmax(0, 1fr) 52px 52px;
-  grid-template-rows: auto repeat(12, 52px);
-  column-gap: 8px;
+.stock-scroll { overflow-x: auto; }
+.stock__months, .stock__row {
+  display: grid; grid-template-columns: 230px repeat(12, minmax(0, 1fr));
+  min-width: 760px; align-items: center;
 }
-.schedule__corner { grid-row: 1; grid-column: 1; }
-.schedule__month {
-  grid-column: 1; grid-row: var(--p);
-  display: flex; align-items: center; justify-content: center; gap: 1px;
-  font-size: 15px; font-weight: 900; color: var(--color-green-dark);
-  border-top: 1px solid var(--color-line);
+.stock__months span {
+  font-size: 15px; font-weight: 900; color: var(--color-green-dark); text-align: center;
+  border-left: 1px solid var(--color-line); padding-bottom: 6px;
 }
-.schedule__month-unit { font-size: 10px; font-weight: 700; color: var(--color-text-sub); }
-.schedule__lane-title {
-  grid-row: 1; padding-bottom: 8px;
-  font-size: 12px; font-weight: 700; line-height: 1.4; text-align: center; align-self: end;
+.stock__months small { font-size: 10px; font-weight: 700; color: var(--color-text-sub); }
+.stock__months span:first-child { border-left: 0; }
+.stock__rows { display: grid; gap: 8px; margin-top: 4px; }
+.stock__label { grid-column: 1; font-size: 13px; font-weight: 700; line-height: 1.4; padding-right: 12px; }
+.stock__bar {
+  grid-column: var(--s) / -1; height: 28px;
+  background: linear-gradient(90deg, var(--color-green) 0 6px, var(--color-green-pale) 6px);
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 50%, calc(100% - 14px) 100%, 0 100%);
+  border-radius: 6px 0 0 6px;
 }
-.schedule__lane-title--1 { grid-column: 2; }
-.schedule__lane-title--2 { grid-column: 3; }
-.schedule__lane-title--3 { grid-column: 4; }
-.schedule__track--1 { grid-column: 2; grid-row: 2 / -1; background: var(--color-bg); border-radius: var(--radius-sm); }
-.schedule__events { display: contents; }
-.schedule__event {
-  grid-column: 2; grid-row: var(--s) / var(--e);
-  margin: 4px 6px; padding: 4px 10px;
-  display: flex; flex-direction: column; justify-content: center;
-  background: var(--color-white); border: 1.5px solid var(--color-green); border-left-width: 5px;
-  border-radius: 8px; line-height: 1.4;
-}
-.schedule__event-title { font-size: 14px; font-weight: 700; }
-.schedule__event-sub { font-size: 12px; color: var(--color-text-sub); }
-.schedule__bar {
-  grid-row: 2 / -1;
-  display: flex; align-items: center; justify-content: center;
-  border-radius: var(--radius-sm);
-  writing-mode: vertical-rl; /* スマホは縦書きの帯 */
-  font-size: 13px; font-weight: 700; letter-spacing: .1em;
-}
-.schedule__bar span { background: var(--color-white); border-radius: 6px; padding: 8px 3px; }
-.schedule__bar--dots {
-  grid-column: 3;
-  /* 毎月1回の交流会を、月ごとの点で表す */
+.stock__bar--dots {
+  /* 毎月の交流会を、月ごとの点で表す */
   background:
-    radial-gradient(circle, var(--color-green) 0 6px, transparent 7px) center top / 100% calc(100% / 12) repeat-y,
+    radial-gradient(circle, var(--color-green) 0 5px, transparent 6px) left center / calc((100% - 14px) / 12) 100% repeat-x,
     var(--color-green-pale);
 }
-.schedule__bar--solid { grid-column: 4; background: var(--color-green-pale); color: var(--color-green-dark); }
-.schedule__bar--solid span { background: none; }
+.stock__note {
+  margin-top: 16px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  font-size: 13px; color: var(--color-text-sub);
+}
+.stock__note .icon { color: var(--color-green); width: 18px; height: 18px; }
+.stock-result { margin-top: 40px; }
+.stock-result__list { margin-top: 16px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.stock-result__list li {
+  display: flex; align-items: center; gap: 8px;
+  background: var(--color-white); border: 1.5px solid var(--color-green); border-radius: var(--radius-pill);
+  padding: 8px 18px; font-weight: 700; font-size: 15px;
+}
+.stock-result__list .icon { color: var(--color-green); }
 
 .flow-title { margin-top: 56px; margin-bottom: 20px; text-align: center; font-size: 20px; font-weight: 900; }
 .flow-title__sub { font-size: 14px; color: var(--color-text-sub); margin-left: .3em; }
@@ -748,35 +737,7 @@ button, input, textarea { font: inherit; color: inherit; }
     padding: 24px;
   }
 
-  /* 年間スケジュール: 横向き（月が列） */
-  .schedule-wrap { padding: 28px 28px 32px; }
-  .schedule {
-    grid-template-columns: 120px repeat(12, minmax(0, 1fr));
-    grid-template-rows: auto minmax(84px, auto) 56px 56px;
-    column-gap: 0; row-gap: 10px;
-  }
-  .schedule__month {
-    grid-row: 1; grid-column: var(--p);
-    flex-direction: row; border-top: 0; border-left: 1px solid var(--color-line);
-    font-size: 16px; padding-bottom: 4px;
-  }
-  .schedule__lane-title { grid-column: 1; align-self: center; text-align: left; padding: 0 12px 0 0; font-size: 14px; }
-  .schedule__lane-title--1 { grid-row: 2; }
-  .schedule__lane-title--2 { grid-row: 3; }
-  .schedule__lane-title--3 { grid-row: 4; }
-  .schedule__track--1 { grid-row: 2; grid-column: 2 / -1; }
-  .schedule__event { grid-row: 2; grid-column: var(--s) / var(--e); margin: 8px 3px; padding: 6px 6px 6px 7px; }
-  .schedule__event-title { font-size: 12px; }
-  .schedule__event-sub { font-size: 11px; }
-  .schedule__bar { grid-column: 2 / -1; writing-mode: horizontal-tb; letter-spacing: .02em; }
-  .schedule__bar span { padding: 2px 12px; }
-  .schedule__bar--dots {
-    grid-row: 3;
-    background:
-      radial-gradient(circle, var(--color-green) 0 6px, transparent 7px) left center / calc(100% / 12) 100% repeat-x,
-      var(--color-green-pale);
-  }
-  .schedule__bar--solid { grid-row: 4; }
+  .stock-wrap { padding: 28px 32px 24px; }
 
   .flow { grid-template-columns: repeat(4, 1fr); gap: 32px; }
   .flow__step:not(:last-child)::after {

@@ -455,41 +455,73 @@
       <div class="section-head reveal">
         <p class="section-head__en">Flow &amp; Schedule</p>
         <h2 class="section-head__title" id="flow-title">ご利用の流れと年間スケジュール</h2>
-        <p class="section-head__lead">記事と発信は年2回。交流会と企業一覧ページへの掲載は、1年を通して続きます。</p>
+        <p class="section-head__lead">公開した記事や投稿、交流会での出会いは、1年の中で積み重なっていきます。</p>
       </div>
 
-      <!-- 年間スケジュールの図。PCは横（月が横軸）、スマホは縦（月が縦軸）。時期は例（README 参照） -->
-      <div class="schedule-wrap reveal">
+      <!-- 年間スケジュール（ストック型。2026-10-27 lp-changes.md §7）。区切り型の表をやめ、始まったものが右端まで残り続ける帯で見せる -->
+      <!-- 帯の開始位置は style の --s（月＋1）。時期は例。PCが前提で、狭い画面では横にスクロールする -->
+      <div class="stock-wrap reveal">
         <p class="schedule__caption"><span class="sample-badge">例</span>1年間の進み方の一例です。実際の時期は<span class="todo">【要入力】</span></p>
-        <div class="schedule">
-          <span class="schedule__corner" aria-hidden="true"></span>
-          <span class="schedule__month" style="--p:2" aria-hidden="true">1<span class="schedule__month-unit">か月目</span></span>
-          <span class="schedule__month" style="--p:3" aria-hidden="true">2<span class="schedule__month-unit">か月目</span></span>
-          <span class="schedule__month" style="--p:4" aria-hidden="true">3<span class="schedule__month-unit">か月目</span></span>
-          <span class="schedule__month" style="--p:5" aria-hidden="true">4<span class="schedule__month-unit">か月目</span></span>
-          <span class="schedule__month" style="--p:6" aria-hidden="true">5<span class="schedule__month-unit">か月目</span></span>
-          <span class="schedule__month" style="--p:7" aria-hidden="true">6<span class="schedule__month-unit">か月目</span></span>
-          <span class="schedule__month" style="--p:8" aria-hidden="true">7<span class="schedule__month-unit">か月目</span></span>
-          <span class="schedule__month" style="--p:9" aria-hidden="true">8<span class="schedule__month-unit">か月目</span></span>
-          <span class="schedule__month" style="--p:10" aria-hidden="true">9<span class="schedule__month-unit">か月目</span></span>
-          <span class="schedule__month" style="--p:11" aria-hidden="true">10<span class="schedule__month-unit">か月目</span></span>
-          <span class="schedule__month" style="--p:12" aria-hidden="true">11<span class="schedule__month-unit">か月目</span></span>
-          <span class="schedule__month" style="--p:13" aria-hidden="true">12<span class="schedule__month-unit">か月目</span></span>
-          <h3 class="schedule__lane-title schedule__lane-title--1">記事・発信</h3>
-          <span class="schedule__track schedule__track--1" aria-hidden="true"></span>
-          <ol class="schedule__events">
-            <li class="schedule__event" style="--s:2;--e:3"><span class="visually-hidden">1か月目：</span><span class="schedule__event-title"><span class="nowrap">打ち</span><span class="nowrap">合わせ</span></span></li>
-            <li class="schedule__event" style="--s:3;--e:4"><span class="visually-hidden">2か月目：</span><span class="schedule__event-title">取材①</span></li>
-            <li class="schedule__event" style="--s:4;--e:6"><span class="visually-hidden">3〜4か月目：</span><span class="schedule__event-title">記事①公開</span><span class="schedule__event-sub">Instagram投稿・広告①</span></li>
-            <li class="schedule__event" style="--s:8;--e:9"><span class="visually-hidden">7か月目：</span><span class="schedule__event-title">取材②</span></li>
-            <li class="schedule__event" style="--s:9;--e:11"><span class="visually-hidden">8〜9か月目：</span><span class="schedule__event-title">記事②公開</span><span class="schedule__event-sub">Instagram投稿・広告②</span></li>
-            <li class="schedule__event" style="--s:13;--e:14"><span class="visually-hidden">12か月目：</span><span class="schedule__event-title"><span class="nowrap">年間活動</span><span class="nowrap">レポート</span></span></li>
+        <div class="stock-scroll">
+          <div class="stock__months" aria-hidden="true">
+            <span></span>
+            <span>1<small>か月目</small></span>
+            <span>2<small>か月目</small></span>
+            <span>3<small>か月目</small></span>
+            <span>4<small>か月目</small></span>
+            <span>5<small>か月目</small></span>
+            <span>6<small>か月目</small></span>
+            <span>7<small>か月目</small></span>
+            <span>8<small>か月目</small></span>
+            <span>9<small>か月目</small></span>
+            <span>10<small>か月目</small></span>
+            <span>11<small>か月目</small></span>
+            <span>12<small>か月目</small></span>
+          </div>
+          <ol class="stock__rows">
+          <li class="stock__row">
+            <span class="stock__label">企業一覧ページへの掲載</span>
+            <span class="stock__bar" style="--s:2"><span class="visually-hidden">1か月目から、その後も残る</span></span>
+          </li>
+          <li class="stock__row">
+            <span class="stock__label">オモモ会での学生との出会い（毎月）</span>
+            <span class="stock__bar stock__bar--dots" style="--s:2"><span class="visually-hidden">1か月目から、その後も残る</span></span>
+          </li>
+          <li class="stock__row">
+            <span class="stock__label">記事①（取材の写真つき）</span>
+            <span class="stock__bar" style="--s:4"><span class="visually-hidden">3か月目から、その後も残る</span></span>
+          </li>
+          <li class="stock__row">
+            <span class="stock__label">ココロミーのInstagramに掲載①</span>
+            <span class="stock__bar" style="--s:5"><span class="visually-hidden">4か月目から、その後も残る</span></span>
+          </li>
+          <li class="stock__row">
+            <span class="stock__label">記事②（取材の写真つき）</span>
+            <span class="stock__bar" style="--s:9"><span class="visually-hidden">8か月目から、その後も残る</span></span>
+          </li>
+          <li class="stock__row">
+            <span class="stock__label">ココロミーのInstagramに掲載②</span>
+            <span class="stock__bar" style="--s:10"><span class="visually-hidden">9か月目から、その後も残る</span></span>
+          </li>
+          <li class="stock__row">
+            <span class="stock__label">年間活動レポート</span>
+            <span class="stock__bar" style="--s:13"><span class="visually-hidden">12か月目から、その後も残る</span></span>
+          </li>
           </ol>
-          <h3 class="schedule__lane-title schedule__lane-title--2">オモモ会</h3>
-          <p class="schedule__bar schedule__bar--dots"><span>毎月1回、交流会にご招待</span></p>
-          <h3 class="schedule__lane-title schedule__lane-title--3">企業一覧ページ</h3>
-          <p class="schedule__bar schedule__bar--solid"><span>1年間、通年で掲載</span></p>
         </div>
+        <!-- TODO: 契約終了後も、記事・企業一覧ページへの掲載が残るかを確認する -->
+        <p class="stock__note"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>帯の矢印は、始まったものがその後も残り続けることを表しています。契約終了後の掲載の扱いは<span class="todo">【要入力】</span></p>
+      </div>
+
+      <div class="stock-result reveal">
+        <h3 class="sub-title">1年後に残るもの</h3>
+        <ul class="stock-result__list">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg>学生が書いた記事 2本</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-camera"/></svg>取材で撮影した写真素材</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg>ココロミーのInstagramへの掲載 2回分</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg>交流会で出会った学生とのつながり</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg>年間活動レポート</li>
+        </ul>
       </div>
 
       <!-- 記事1本ができるまで（企業側の負担を各ステップに明記。lp-spec.md §5-5） -->
