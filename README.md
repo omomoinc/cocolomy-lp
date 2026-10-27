@@ -18,7 +18,7 @@
 │   ├─ hero-cafeteria.webp        # ヒーロー写真（PC用 1536×1024）
 │   ├─ hero-cafeteria-sp.webp     # ヒーロー写真（スマホ用 768×512）
 │   ├─ hero-bg-blur.webp          # ヒーロー背景（円のデザインをぼかしたもの）
-│   ├─ placeholder/about.svg      # 仮画像（イラスト到着後に差し替え）
+│   ├─ placeholder/service.svg・case.svg  # 仮画像（差し替え予定）
 │   └─ articles/                  # 公開済み記事のサムネイル（800×450 の WebP、4枚）
 ├─ README.md                      # このファイル（TODO一覧）
 ├─ WORKLOG.md                     # 作業記録・引き継ぎメモ
@@ -73,7 +73,6 @@ $1| #9 料金 | `TODO: 料金は打ち合わせ後に確定`（金額は変え�
 | `<head>` | OGPのURL・画像 | example.com（ダミー） |
 
 ### その他（モック作成は止めない）
-- [ ] AI生成イラストの差し替え: `assets/images/placeholder/about.svg`（実績セクション）
 - [ ] 問い合わせフォームの送信方式（現在はダミー: 送信せず完了表示のみ。`js/main.js` の TODO）
 - [ ] プライバシーポリシーの文面・リンク
 - [ ] 公開範囲・ホスティング先・独自ドメイン（確定まで `noindex` を維持）

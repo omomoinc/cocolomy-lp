@@ -107,7 +107,7 @@ sh tools/image-convert/convert.sh "$HOME/Downloads/Warm Cafeteria Conversation.p
 
 1. 画像を WebP に変換して `assets/images/` に置く（例: `about.webp`）。
 2. `index.html` の該当 `<img>`（`TODO: AI生成イラストに差し替え` のコメントの直下）の `src`・`width`・`height`・`alt` を更新する。
-   - 実績セクション: `assets/images/placeholder/about.svg`（`loading="lazy"` あり）
+   - （`placeholder/about.svg` は 2026-10-27 の仮案で「ココロミーとは」と一緒に削除。今の仮画像は `placeholder/service.svg`（サービス内容の詳細）と `placeholder/case.svg`（事例）。どちらも `loading="lazy"` あり）
 3. alt は「イラスト」と分かる表現にする（実在の学生や社員に見せない。lp-spec.md §6）。
 
 ## 表示確認の方法（Claude Code 用メモ）
