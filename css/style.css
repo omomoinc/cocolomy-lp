@@ -277,6 +277,32 @@ button, input, textarea { font: inherit; color: inherit; }
 .cta-band__text { font-weight: 700; }
 
 /* ---------- #6 事例・実績 ---------- */
+/* セクション内の小見出し（到達規模／取り組みの事例／掲載した記事） */
+.sub-title { font-size: 20px; font-weight: 900; text-align: center; line-height: 1.5; }
+.sub-lead { margin: 8px auto 20px; max-width: 720px; text-align: center; font-size: 15px; color: var(--color-text-sub); }
+.reach__note { margin-top: 12px; text-align: center; font-size: 13px; color: var(--color-text-sub); }
+
+.case { margin-top: 64px; }
+.case-card {
+  background: var(--color-white); border-radius: var(--radius-card); box-shadow: var(--shadow-card);
+  padding: 24px 20px;
+}
+.case-card__head { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.case-card__head .sample-badge { align-self: center; }
+.case-card__company { font-size: 18px; font-weight: 900; }
+.case-card__media { margin-top: 16px; display: grid; gap: 16px; }
+.case-card__media img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius-sm); }
+.case-card__label {
+  margin-top: 8px; display: flex; align-items: center; gap: 6px;
+  font-size: 14px; font-weight: 700;
+}
+.case-card__label .icon { color: var(--color-green); width: 18px; height: 18px; }
+.case-card__voice {
+  margin: 20px 0 0; padding: 16px 20px;
+  background: var(--color-bg); border-left: 4px solid var(--color-green); border-radius: var(--radius-sm);
+}
+.case-card__voice-label { font-size: 13px; font-weight: 700; color: var(--color-green-dark); }
+
 .stats { margin-top: 0; display: grid; gap: 12px; }
 .stat {
   background: var(--color-white); border-radius: var(--radius-card); box-shadow: var(--shadow-card);
@@ -293,9 +319,7 @@ button, input, textarea { font: inherit; color: inherit; }
 .stat__note .todo { font-size: 12px; }
 
 /* ---------- #3 公開済み記事 ---------- */
-.articles { margin-top: 56px; }
-.articles__title { font-size: 20px; font-weight: 900; text-align: center; }
-.articles__lead { text-align: center; margin: 8px 0 24px; font-size: 15px; }
+.articles { margin-top: 64px; }
 /* ダミーであることを示す表記（lp-spec.md §7） */
 .sample-badge {
   align-self: flex-start;
@@ -640,6 +664,8 @@ button, input, textarea { font: inherit; color: inherit; }
   :root { --gutter: 32px; }
   .stats { grid-template-columns: repeat(2, 1fr); max-width: 880px; margin-inline: auto; }
   .solution-list { grid-template-columns: repeat(3, 1fr); }
+  .case-card__media { grid-template-columns: repeat(3, 1fr); }
+  .case-card { padding: 32px; }
   .article-grid { grid-template-columns: repeat(2, 1fr); }
   .ideas__list { grid-template-columns: repeat(2, 1fr); }
   .includes { grid-template-columns: repeat(3, 1fr); }

@@ -299,14 +299,18 @@
     </div>
   </section>
 
-  <!-- ===== #6 事例・実績（数字＋公開済み記事）。「ココロミーとは」単独の紹介は削除（2026-10-27 lp-changes.md §2） ===== -->
+  <!-- ===== #6 事例・実績（到達規模＋取り組みの事例＋掲載記事。2026-10-27 lp-changes.md §3・§5） ===== -->
   <section class="section" id="results" aria-labelledby="results-title">
     <div class="container">
       <div class="section-head reveal">
         <p class="section-head__en">Results</p>
         <h2 class="section-head__title" id="results-title">事例・実績</h2>
       </div>
-      <!-- 数字（lp-spec.md §5-3・§6 の表記ルールに従う。PVは28日間の値なので期間を必ず併記） -->
+      <!-- 到達規模（lp-changes.md §5）。既存の数値は消さない。PVは28日間の値なので期間を必ず併記。全国規模との比較はしない -->
+      <div class="reach reveal">
+        <h3 class="sub-title">長野での到達規模</h3>
+        <p class="sub-lead">ココロミーのWebメディアとInstagramが、長野でどのくらい見られているか。</p>
+      </div>
       <ul class="stats reveal">
         <li class="stat">
           <svg class="icon stat__icon" aria-hidden="true"><use href="#i-eye"/></svg>
@@ -320,14 +324,50 @@
           <!-- TODO: フォロワーの実数と時点を入力 -->
           <span class="stat__value"><span class="todo">【要入力】</span><small>人</small></span>
           <!-- 大学名は載せない（2026-10-23 決定） -->
-          <span class="stat__note">活動拠点の大学の、1学年の人数を超える規模です。</span>
+          <!-- TODO: 比較の文言（学生数との比較）は根拠データが未確認。比べる対象と数字を確認する（lp-changes.md §5） -->
+          <span class="stat__note"><span class="todo">活動拠点の大学の、1学年の人数を超える規模です。（要確認）</span></span>
         </li>
       </ul>
+      <!-- TODO: PVのうち長野県内からのアクセスの割合など、「長野での」到達を示すデータを確認する -->
+      <p class="reach__note reveal">※ PVはWebメディア全体の数値です。長野県内からのアクセスの割合は<span class="todo">【要入力】</span></p>
+
+      <!-- 取り組みの事例（記事＋オモモ会の様子＋Instagram掲載）。1社分の枠。実写素材と企業の声が届いたら差し替える -->
+      <!-- 差し替え方: 各 <img> の src を実写（assets/images/cases/ など）に、alt を内容に合わせて変える。企業の声は、いただいたコメントをそのまま載せる（盛らない） -->
+      <div class="case reveal">
+        <h3 class="sub-title">取り組みの事例</h3>
+        <p class="sub-lead">記事の掲載だけでなく、Instagramへの掲載、交流会での学生との出会いまで、1年間の取り組み全体をご紹介します。</p>
+        <article class="case-card">
+          <header class="case-card__head">
+            <span class="sample-badge">サンプル</span>
+            <!-- TODO: 事例として紹介する企業名（掲載の許可を取る） -->
+            <h4 class="case-card__company"><span class="todo">【要入力】企業名</span></h4>
+          </header>
+          <ul class="case-card__media">
+            <li>
+              <img src="assets/images/placeholder/case.svg" width="800" height="600" loading="lazy" alt="ココロミーに掲載した記事の画像（差し替え予定）">
+              <p class="case-card__label"><svg class="icon" aria-hidden="true"><use href="#i-pen"/></svg>ココロミーに記事を掲載</p>
+            </li>
+            <li>
+              <img src="assets/images/placeholder/case.svg" width="800" height="600" loading="lazy" alt="ココロミーのInstagramに掲載した投稿の画像（差し替え予定）">
+              <p class="case-card__label"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg>ココロミーのInstagramに掲載</p>
+            </li>
+            <li>
+              <img src="assets/images/placeholder/case.svg" width="800" height="600" loading="lazy" alt="交流会「オモモ会」で企業の方と学生が話している様子の写真（差し替え予定）">
+              <p class="case-card__label"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg>オモモ会での交流</p>
+            </li>
+          </ul>
+          <!-- TODO: 企業の声（実際にいただいたコメントを、事実ベースでそのまま） -->
+          <blockquote class="case-card__voice">
+            <p class="case-card__voice-label">企業の方の声</p>
+            <p><span class="todo">【要入力】</span></p>
+          </blockquote>
+        </article>
+      </div>
 
       <!-- 公開済み記事カード -->
       <div class="articles reveal">
-        <h3 class="articles__title">公開済みの記事</h3>
-        <p class="articles__lead">学生ライターが実際に取材・執筆し、ココロミーに掲載した記事です。</p>
+        <h3 class="sub-title">ココロミーに掲載した記事</h3>
+        <p class="sub-lead">学生ライターが実際に取材・執筆し、ココロミーに掲載した記事です。</p>
         <!-- 公開前に、掲載企業へ一言確認する（README 参照）。サムネイルは assets/images/articles/（800×450 の WebP） -->
         <ul class="article-grid">
           <li>

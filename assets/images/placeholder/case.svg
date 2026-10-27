@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#E5EFD9"/>
+  <rect x="14" y="14" width="772" height="572" rx="20" fill="none" stroke="#4E8A3A" stroke-width="3" stroke-dasharray="14 12"/>
+  <text x="50%" y="47%" text-anchor="middle" font-family="Noto Sans JP, sans-serif" font-size="32" font-weight="700" fill="#3A6B2A">実写の画像</text>
+  <text x="50%" y="57%" text-anchor="middle" font-family="Noto Sans JP, sans-serif" font-size="22" fill="#3A6B2A">case.svg → 差し替え予定</text>
+</svg>
