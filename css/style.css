@@ -460,18 +460,25 @@ button, input, textarea { font: inherit; color: inherit; }
 }
 .stock__months small { font-size: 10px; font-weight: 700; color: var(--color-text-sub); }
 .stock__months span:first-child { border-left: 0; }
-.stock__rows { display: grid; gap: 8px; margin-top: 4px; }
-.stock__label { grid-column: 1; font-size: 13px; font-weight: 700; line-height: 1.4; padding-right: 12px; }
+.stock__rows { display: grid; gap: 10px; margin-top: 4px; }
+.stock__label { grid-column: 1; display: flex; flex-direction: column; line-height: 1.4; padding-right: 12px; }
+.stock__label strong { font-size: 13px; }
+.stock__label small { font-size: 11px; color: var(--color-text-sub); }
 .stock__bar {
   grid-column: var(--s) / -1; height: 28px;
   background: linear-gradient(90deg, var(--color-green) 0 6px, var(--color-green-pale) 6px);
   clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 50%, calc(100% - 14px) 100%, 0 100%);
   border-radius: 6px 0 0 6px;
 }
+/* その月だけのもの（契約・企画設計、年間レポート） */
+.stock__bar--point { grid-column: var(--s) / span 1; clip-path: none; border-radius: 6px; background: var(--color-green); }
+/* 通年のもの（掲載）: 矢印なしの帯 */
+.stock__bar--year { clip-path: none; border-radius: 6px; background: var(--color-green-pale); border: 1.5px dashed var(--color-green); }
 .stock__bar--dots {
-  /* 毎月の交流会を、月ごとの点で表す */
+  /* 通年の交流会の機会を、月ごとの点で表す（矢印なし） */
+  clip-path: none; border-radius: 6px;
   background:
-    radial-gradient(circle, var(--color-green) 0 5px, transparent 6px) left center / calc((100% - 14px) / 12) 100% repeat-x,
+    radial-gradient(circle, var(--color-green) 0 5px, transparent 6px) left center / calc(100% / 12) 100% repeat-x,
     var(--color-green-pale);
 }
 .stock__note {
