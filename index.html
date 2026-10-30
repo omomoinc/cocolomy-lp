@@ -86,7 +86,7 @@
 
   <!-- ===== #1 ヒーロー ===== -->
   <!-- 写真を主役にする（2026-10-23 ユーザー指示）。PCは写真を右端まで広げ、スマホは写真を先に見せる -->
-  <!-- 背景: assets/images/hero-bg-blur.webp（「名称未設定のデザイン.png」をぼかしたもの。CSSで指定） -->
+  <!-- 背景は基調色のみ（トンマナ指示書。旧: hero-bg-blur.webp のぼかし画像は使わない） -->
   <section class="hero" aria-labelledby="hero-title">
     <div class="hero__inner">
       <figure class="hero__visual">
@@ -104,7 +104,7 @@
         <!-- キャッチの下は1行だけ（2026-10-30 ユーザー指示。説明文とキーワードは削除） -->
         <p class="hero__tagline">学生が取材、学生に発信</p>
         <div class="hero__actions">
-          <a class="btn btn--primary btn--lg" href="#intro">サービスについて見る<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></a>
+          <a class="btn btn--ghost btn--lg" href="#intro">サービスについて見る<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></a>
           <!-- 控えめな問い合わせ導線（lp-changes-v2.md §3-L。v0.4 の「FVにCTAを置かない」判断を上書き） -->
           <a class="hero__consult" href="#contact">まずは相談してみる</a>
         </div>
