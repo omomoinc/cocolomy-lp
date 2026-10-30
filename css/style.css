@@ -202,22 +202,6 @@ button, input, textarea { font: inherit; color: inherit; }
 }
 .intro__media strong { margin-right: .8em; color: var(--color-main-dark); }
 
-/* ---------- #4 ソリューション（3つを同列に） ---------- */
-.solution-list { display: grid; gap: 16px; margin-bottom: 56px; }
-.solution-card {
-  display: flex; flex-direction: column; gap: 8px;
-  background: var(--color-white); border-radius: var(--radius-card); box-shadow: var(--shadow-card);
-  padding: 28px 24px;
-}
-.solution-card__title { font-size: 19px; font-weight: 700; line-height: 1.5; margin-top: 8px; }
-.solution-card__tag { font-size: 13px; font-weight: 700; color: var(--color-main-dark); }
-.solution-card > p:not([class]) { font-size: 16px; }
-.solution-card__get {
-  margin-top: auto; padding-top: 14px; border-top: 1px solid var(--color-line);
-  font-size: 16px;
-}
-.solution-card__get strong { display: block; font-size: 13px; color: var(--color-main-dark); }
-
 /* ---------- #7 記事の活用方法 ---------- */
 .usage-list { display: grid; gap: 12px; }
 .usage-card {
@@ -399,34 +383,32 @@ button, input, textarea { font: inherit; color: inherit; }
 }
 .strength-card__text { margin: 0; font-size: 17px; font-weight: 700; line-height: 1.6; }
 
-/* ---------- #5 サービス内容の詳細: 手段（項目ボタン＋説明パネル） ---------- */
-/* スマホ: アコーディオン（ボタンの下にパネル）。PC（.js あり）: 左にボタン、右にパネル */
-.service-hint { text-align: center; font-size: 14px; color: var(--color-text-sub); margin-bottom: 16px; }
-.service-tabs { display: grid; gap: 10px; }
-.service-item {
+/* ---------- #4 サービス内容: 情報発信の3本柱＋そのほかのサービス ---------- */
+.pillar-list { margin-top: 20px; display: grid; gap: 20px; }
+.pillar {
+  display: flex; flex-direction: column;
   background: var(--color-white); border-radius: var(--radius-card); box-shadow: var(--shadow-card);
-  overflow: hidden;
+  border-top: 4px solid var(--color-main); overflow: hidden;
 }
-.service-item__btn {
-  width: 100%; display: flex; align-items: center; gap: 12px;
-  padding: 14px 16px; text-align: left; line-height: 1.5;
-  background: none; border: 0; border-left: 4px solid transparent; cursor: pointer;
+.pillar__img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.pillar__body { padding: 20px 22px 24px; }
+.pillar__num { font-size: 13px; font-weight: 700; color: var(--color-main); }
+.pillar__title { margin-top: 4px; font-size: 20px; font-weight: 700; line-height: 1.5; color: var(--color-main); }
+.pillar__title .icon { width: 24px; height: 24px; vertical-align: -4px; margin-right: 6px; }
+.pillar-ideas { margin-top: 20px; }
+.pillar-ideas .ideas { margin-top: 0; background: var(--color-white); box-shadow: var(--shadow-card); }
+.pillar-ideas .ideas__list li { background: var(--color-surface); }
+
+.sub-title--others { margin-top: 56px; }
+.sub-service-list { margin-top: 16px; display: grid; gap: 12px; }
+.sub-service {
+  background: var(--color-white); border-radius: var(--radius-card); box-shadow: var(--shadow-card);
+  padding: 16px 18px;
 }
-.service-item__btn[aria-expanded="true"] { border-left-color: var(--color-main); background: var(--color-main-pale); }
-.service-item__num { flex-shrink: 0; font-size: 14px; font-weight: 700; color: var(--color-main-dark); }
-.service-item__icon {
-  display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0;
-  width: 40px; height: 40px; border-radius: 50%;
-  background: var(--color-main-pale); color: var(--color-main-dark);
-}
-.service-item__btn[aria-expanded="true"] .service-item__icon { background: var(--color-main); color: var(--color-white); }
-.service-item__title { font-weight: 700; }
-.service-item__title .tag { margin-left: 6px; }
-.service-item__panel { padding: 16px; }
-.service-item__img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--radius-sm); }
-.service-item__body { margin-top: 14px; }
-.service-item__panel-title { font-size: 18px; font-weight: 700; line-height: 1.5; }
-.service-item__body > p { margin-top: 8px; font-size: 16px; }
+.sub-service__title { font-size: 17px; font-weight: 700; line-height: 1.5; }
+.sub-service__title .icon { color: var(--color-main); vertical-align: -4px; margin-right: 6px; }
+.sub-service p { margin-top: 4px; font-size: 16px; color: var(--color-text-sub); }
+
 /* 「提供するもの」＋「企業にとっての価値」の2段 */
 .svc-two { margin-top: 10px; display: grid; gap: 4px; }
 .svc-two dt { font-size: 13px; font-weight: 700; color: var(--color-main-dark); margin-top: 6px; }
@@ -733,7 +715,6 @@ button, input, textarea { font: inherit; color: inherit; }
 @media (min-width: 600px) {
   :root { --gutter: 32px; }
   .stats { grid-template-columns: repeat(2, 1fr); max-width: 880px; margin-inline: auto; }
-  .solution-list { grid-template-columns: repeat(3, 1fr); }
   .case-card__media { grid-template-columns: repeat(3, 1fr); }
   .usage-list { grid-template-columns: repeat(2, 1fr); gap: 16px; }
   .strength-list { grid-template-columns: repeat(3, 1fr); gap: 16px; }
@@ -791,24 +772,8 @@ button, input, textarea { font: inherit; color: inherit; }
 
 
   .article-grid { grid-template-columns: repeat(4, 1fr); }
-  /* サービス内容: 左にボタン、右にパネル（JSがあるときだけ。JSなしは縦に全部表示） */
-  .js .service-tabs {
-    grid-template-columns: minmax(0, 400px) minmax(0, 1fr);
-    grid-template-rows: repeat(6, auto) 1fr;
-    gap: 10px 32px; align-items: start;
-  }
-  .js .service-item { display: contents; }
-  .js .service-item__btn {
-    grid-column: 1;
-    background: var(--color-white); border-radius: var(--radius-card); box-shadow: var(--shadow-card);
-    padding: 14px 18px;
-  }
-  .js .service-item__btn[aria-expanded="true"] { background: var(--color-main-pale); }
-  .js .service-item__panel {
-    grid-column: 2; grid-row: 1 / -1;
-    background: var(--color-white); border-radius: var(--radius-card); box-shadow: var(--shadow-card);
-    padding: 24px;
-  }
+  .pillar-list { grid-template-columns: repeat(3, 1fr); }
+  .sub-service-list { grid-template-columns: repeat(3, 1fr); }
 
   .stock-wrap { padding: 28px 32px 24px; }
   .stock__months, .stock__row { grid-template-columns: 230px repeat(12, minmax(0, 1fr)); }

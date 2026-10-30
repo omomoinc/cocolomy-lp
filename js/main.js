@@ -35,36 +35,6 @@
     reveals.forEach(function (el) { el.classList.add('is-visible'); });
   }
 
-  // サービス内容：項目にカーソルを合わせる（PC）／タップする（スマホ）と、画像と説明を表示
-  // PC は常にどれか1つを表示。スマホはアコーディオンなので、開いている項目をもう一度タップすると閉じる
-  var serviceBtns = Array.prototype.slice.call(document.querySelectorAll('.service-item__btn'));
-  var pcLayout = window.matchMedia('(min-width: 960px)');
-  var canHover = window.matchMedia('(hover: hover)');
-  function showService(btn) {
-    serviceBtns.forEach(function (b) {
-      var on = b === btn;
-      b.setAttribute('aria-expanded', on ? 'true' : 'false');
-      document.getElementById(b.getAttribute('aria-controls')).hidden = !on;
-    });
-  }
-  if (serviceBtns.length) {
-    showService(serviceBtns[0]);
-    serviceBtns.forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var isOpen = btn.getAttribute('aria-expanded') === 'true';
-        showService(isOpen && !pcLayout.matches ? null : btn);
-      });
-      btn.addEventListener('mouseenter', function () {
-        if (pcLayout.matches && canHover.matches) showService(btn);
-      });
-    });
-    // スマホで全部閉じた状態から PC 幅に広げたときは、最初の項目を表示する
-    pcLayout.addEventListener('change', function () {
-      var anyOpen = serviceBtns.some(function (b) { return b.getAttribute('aria-expanded') === 'true'; });
-      if (pcLayout.matches && !anyOpen) showService(serviceBtns[0]);
-    });
-  }
-
   // 問い合わせフォーム（ダミー）
   // TODO: 送信方式が決まったら（Formspree / Googleフォーム等）ここを差し替える。サーバー側コードは書かない。
   var form = document.getElementById('contact-form');

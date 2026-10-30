@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
-  <rect width="800" height="450" fill="#E5EFD9"/>
-  <rect x="14" y="14" width="772" height="422" rx="20" fill="none" stroke="#4E8A3A" stroke-width="3" stroke-dasharray="14 12"/>
-  <text x="50%" y="47%" text-anchor="middle" font-family="Noto Sans JP, sans-serif" font-size="30" font-weight="700" fill="#3A6B2A">サービスの画像</text>
-  <text x="50%" y="58%" text-anchor="middle" font-family="Noto Sans JP, sans-serif" font-size="20" fill="#3A6B2A">service.svg → 差し替え予定</text>
+  <rect width="800" height="450" fill="#E3EDF7"/>
+  <rect x="14" y="14" width="772" height="422" rx="20" fill="none" stroke="#1F4E79" stroke-width="3" stroke-dasharray="14 12"/>
+  <text x="50%" y="47%" text-anchor="middle" font-family="Noto Sans JP, sans-serif" font-size="30" font-weight="700" fill="#1F4E79">サービスの画像</text>
+  <text x="50%" y="58%" text-anchor="middle" font-family="Noto Sans JP, sans-serif" font-size="20" fill="#1F4E79">service.svg → 差し替え予定</text>
 </svg>
