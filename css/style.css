@@ -233,6 +233,7 @@ button, input, textarea { font: inherit; color: inherit; }
 }
 .section-head__sub { font-size: .6em; font-weight: 700; color: var(--color-text-sub); }
 .section-head__lead { max-width: 40em; margin: 16px auto 0; color: var(--color-text); }
+.section-head__lead--catch { font-size: 20px; font-weight: 700; color: var(--color-main); }
 
 .icon-badge {
   display: inline-flex; align-items: center; justify-content: center;
@@ -520,6 +521,12 @@ button, input, textarea { font: inherit; color: inherit; }
 .flow-title { margin-top: 56px; margin-bottom: 20px; text-align: center; font-size: 20px; font-weight: 700; }
 .flow-title__sub { font-size: 14px; color: var(--color-text-sub); margin-left: .3em; }
 .flow-note { margin-top: 20px; text-align: center; font-size: 16px; }
+/* 各ステップでできるコンテンツ */
+.flow__step .flow__made {
+  margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--color-line);
+  font-size: 15px; font-weight: 700; color: var(--color-main);
+}
+.flow__made span { display: block; font-size: 12px; font-weight: 700; color: var(--color-text-sub); }
 .flow__step .flow__burden {
   display: inline-flex; align-items: center; gap: 6px; text-align: left; margin-top: 10px;
   background: var(--color-main-pale); border-radius: var(--radius-pill); padding: 4px 12px;
