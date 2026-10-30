@@ -171,15 +171,16 @@
     </div>
   </section>
 
-  <!-- ===== #4 ソリューション（新規）。ココロミー／Instagram／オモモ会を同列に並べる（2026-10-27 lp-changes.md §2） ===== -->
-  <!-- 説明文は仮文（TODO: 文面を確定） -->
-  <section class="section" id="solution" aria-labelledby="solution-title">
+  <!-- ===== #4 サービス内容（旧「できること」の3カードと「サービス内容の詳細」6項目を統合。2026-10-30 lp-changes-v2.md A-5） ===== -->
+  <!-- 「ココロミーの強み」ブロックは #6 強み・実績へ移した（B-1） -->
+  <section class="section section--alt" id="service" aria-labelledby="service-title">
     <div class="container">
       <div class="section-head reveal">
-        <p class="section-head__en">Solution</p>
-        <h2 class="section-head__title" id="solution-title"><span data-service-name>ココロミー for Business</span>でできること</h2>
-        <p class="section-head__lead">オンライン（記事・Instagram）とオフライン（交流会）を組み合わせて、学生との関係を1年かけてつくります。</p>
+        <p class="section-head__en">Service</p>
+        <h2 class="section-head__title" id="service-title">サービス内容</h2>
+        <p class="section-head__lead">Web記事・ココロミーのInstagram・交流会を組み合わせた、1年間の広報・PRサービスです。</p>
       </div>
+      <!-- ココロミー・Instagram・オモモ会は同列 -->
       <ul class="solution-list reveal">
         <li class="solution-card">
           <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="#i-pen"/></svg></span>
@@ -203,39 +204,8 @@
           <p class="solution-card__get"><strong>得られるもの</strong>学生と直接会って話し、考えや価値観を聞く機会。</p>
         </li>
       </ul>
-    </div>
-  </section>
 
-  <!-- ===== #5 サービス内容の詳細 ===== -->
-  <section class="section section--alt" id="service" aria-labelledby="service-title">
-    <div class="container">
-      <div class="section-head reveal">
-        <p class="section-head__en">Details</p>
-        <h2 class="section-head__title" id="service-title">サービス内容の詳細</h2>
-        <p class="section-head__lead">学生が記事で自社の魅力を言葉にし、ココロミーのInstagramで紹介し、交流会で学生と直接話す。<br class="pc-only">発信と出会いを、1年かけて続けるプログラムです。</p>
-      </div>
-
-      <!-- 強み（どうつくるか）と手段（どこで・何で届けるか）を分けて示す（2026-10-27 lp-changes.md §7）。TODO: 本文は仮文 -->
-      <div class="strengths reveal">
-        <h3 class="sub-title">ココロミーの強み</h3>
-        <ul class="strength-list">
-          <li class="strength-card">
-            <h4 class="strength-card__title">学生目線</h4>
-            <p>書き手は学生ライター。学生が気になること、学生に伝わる言葉を大切にして記事をつくります。</p>
-          </li>
-          <li class="strength-card">
-            <h4 class="strength-card__title">企画力</h4>
-            <p>記事の切り口は、企業ごとに学生ライターと一緒に考えます。企業紹介、インタビュー、現場レポートなど、伝えたいことに合わせて企画します。</p>
-          </li>
-          <li class="strength-card">
-            <!-- TODO: デザイン（アイキャッチ画像など）を誰がどこまで制作するか確認 -->
-            <h4 class="strength-card__title">デザイン力</h4>
-            <p>記事のアイキャッチ画像など、学生の目に留まる見せ方まで含めてつくります。</p>
-          </li>
-        </ul>
-      </div>
-
-      <h3 class="sub-title sub-title--means reveal">手段（媒体・交流会）</h3>
+      <h3 class="sub-title sub-title--means reveal">6つのサービス</h3>
       <!-- 項目にカーソルを合わせる（スマホはタップ）と、右（スマホは項目の下）に画像と説明が出る。動きは js/main.js -->
       <p class="service-hint reveal"><span class="pc-only">項目にカーソルを合わせると、</span><span class="sp-only">項目をタップすると、</span>画像と説明が表示されます。</p>
       <div class="service-tabs reveal">
@@ -243,14 +213,18 @@
           <button type="button" class="service-item__btn" id="svc-btn-01" aria-expanded="true" aria-controls="svc-panel-01">
             <span class="service-item__num">01</span>
             <span class="service-item__icon"><svg class="icon" aria-hidden="true"><use href="#i-pen"/></svg></span>
-            <span class="service-item__title">学生ライターによる取材・記事制作<span class="tag">年2本</span></span>
+            <span class="service-item__title">学生による取材・Web記事制作<span class="tag">年2本</span></span>
           </button>
           <div class="service-item__panel" id="svc-panel-01" role="region" aria-labelledby="svc-btn-01">
             <img class="service-item__img" src="assets/images/articles/shinwakosaku.webp" width="800" height="450" loading="lazy" alt="ココロミーに掲載した記事「伸和工作」のアイキャッチ画像（実際の記事）">
             <div class="service-item__body">
-              <h3 class="service-item__panel-title">学生ライターによる取材・記事制作</h3>
-              <!-- TODO: 説明文は仮文 -->
-              <p>学生ライターが経営者や社員の方を取材し、学生が「知りたい」と感じたことを起点に、仕事の中身や会社の考え方を、学生の目線と言葉で記事にまとめます。記事はココロミーのWebメディアに掲載します。</p>
+              <h3 class="service-item__panel-title">学生による取材・Web記事制作</h3>
+              <dl class="svc-two">
+                <dt>提供するもの</dt>
+                <dd>学生ライターによる取材と、Web記事の制作。記事はココロミーのWebメディアに掲載します。</dd>
+                <dt>企業にとっての価値</dt>
+                <dd>学生ならではの視点で、企業の事業・技術・人・文化などの魅力を発掘し、記事として発信します。</dd>
+              </dl>
               <div class="ideas">
                 <p class="ideas__title">記事企画の例</p>
                 <ul class="ideas__list">
@@ -268,16 +242,19 @@
           <button type="button" class="service-item__btn" id="svc-btn-02" aria-expanded="false" aria-controls="svc-panel-02">
             <span class="service-item__num">02</span>
             <span class="service-item__icon"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg></span>
-            <span class="service-item__title">ココロミーのInstagramに掲載<span class="tag">年2回</span></span>
+            <span class="service-item__title">ココロミーのInstagramでの情報発信<span class="tag">年2回</span></span>
           </button>
           <div class="service-item__panel" id="svc-panel-02" role="region" aria-labelledby="svc-btn-02">
             <!-- TODO: サービスの画像に差し替え（assets/images/placeholder/service.svg） -->
             <img class="service-item__img" src="assets/images/placeholder/service.svg" width="800" height="450" loading="lazy" alt="ココロミーのInstagramに掲載した投稿のイメージ画像（差し替え予定）">
             <div class="service-item__body">
-              <h3 class="service-item__panel-title">ココロミーのInstagramに掲載</h3>
-              <!-- TODO: 説明文は仮文 -->
-              <p>公開した記事の内容を、ココロミーのInstagramアカウントで紹介します。あわせて、学生に向けたInstagram広告を配信します（広告費は別途）。</p>
-              <p>御社のInstagramアカウントを運用するサービスではありません。</p>
+              <h3 class="service-item__panel-title">ココロミーのInstagramでの情報発信</h3>
+              <dl class="svc-two">
+                <dt>提供するもの</dt>
+                <dd>記事と連動した、ココロミーのInstagramへの掲載。学生に向けたInstagram広告の配信（広告費は別途）。御社のInstagramアカウントを運用するサービスではありません。</dd>
+                <dt>企業にとっての価値</dt>
+                <dd>ココロミーのInstagramを活用し、企業の魅力を分かりやすく紹介。Web記事への導線もつくります。</dd>
+              </dl>
             </div>
           </div>
         </div>
@@ -292,67 +269,90 @@
             <img class="service-item__img" src="assets/images/placeholder/service.svg" width="800" height="450" loading="lazy" alt="企業一覧ページのイメージ画像（差し替え予定）">
             <div class="service-item__body">
               <h3 class="service-item__panel-title">企業情報の通年掲載</h3>
-              <!-- TODO: 説明文は仮文 -->
-              <p>ココロミーの「企業一覧ページ」に、御社の情報を1年間掲載します。記事を読んで興味を持った学生が、あとから御社のことを確かめられる場所になります。</p>
+              <dl class="svc-two">
+                <dt>提供するもの</dt>
+                <dd>ココロミーの「企業一覧ページ」への、1年間の掲載。</dd>
+                <dt>企業にとっての価値</dt>
+                <dd>学生が企業について知りたいと思ったとき、いつでも情報にアクセスできる状態をつくります。</dd>
+              </dl>
             </div>
           </div>
         </div>
-        <div class="service-item">
+        <!-- TODO: オモモ会の頻度「月1回」は根拠が未確認（lp-changes-v2.md §4-C）。表記は「オモモ会」で統一 -->
+          <div class="service-item">
           <button type="button" class="service-item__btn" id="svc-btn-04" aria-expanded="false" aria-controls="svc-panel-04">
             <span class="service-item__num">04</span>
             <span class="service-item__icon"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></span>
-            <span class="service-item__title">オモモ会<span class="tag">月1回の交流会</span></span>
+            <span class="service-item__title">オモモ会への参加<span class="tag">月1回の交流会</span></span>
           </button>
           <div class="service-item__panel" id="svc-panel-04" role="region" aria-labelledby="svc-btn-04">
             <!-- TODO: サービスの画像に差し替え（assets/images/placeholder/service.svg） -->
             <img class="service-item__img" src="assets/images/placeholder/service.svg" width="800" height="450" loading="lazy" alt="交流会「オモモ会」のイメージ画像（差し替え予定）">
             <div class="service-item__body">
-              <h3 class="service-item__panel-title">オモモ会</h3>
-              <!-- TODO: 説明文は仮文 -->
-              <p>学生と社会人が気軽に集まる、月1回の交流会にご招待します。かしこまった場ではなく、仕事のことや学生の考えを、気軽に話せる場です。</p>
-              <p>記事を読んだ学生と、実際に顔を合わせて話す機会にもなります。</p>
+              <h3 class="service-item__panel-title">オモモ会への参加</h3>
+              <dl class="svc-two">
+                <dt>提供するもの</dt>
+                <dd>学生と社会人が交流するイベント「オモモ会」へのご招待。</dd>
+                <dt>企業にとっての価値</dt>
+                <dd>学生と社会人が交流するイベントに参加できます。学生へのPRや相互理解の機会として活用できます。</dd>
+              </dl>
             </div>
           </div>
         </div>
-        <div class="service-item">
+        <!-- TODO: 素材の利用条件（lp-changes-v2.md §4） -->
+          <div class="service-item">
           <button type="button" class="service-item__btn" id="svc-btn-05" aria-expanded="false" aria-controls="svc-panel-05">
             <span class="service-item__num">05</span>
             <span class="service-item__icon"><svg class="icon" aria-hidden="true"><use href="#i-camera"/></svg></span>
-            <span class="service-item__title">写真・SNS素材の提供</span>
+            <span class="service-item__title">写真・素材提供</span>
           </button>
           <div class="service-item__panel" id="svc-panel-05" role="region" aria-labelledby="svc-btn-05">
             <!-- TODO: サービスの画像に差し替え（assets/images/placeholder/service.svg） -->
             <img class="service-item__img" src="assets/images/placeholder/service.svg" width="800" height="450" loading="lazy" alt="取材で撮影した写真素材のイメージ画像（差し替え予定）">
             <div class="service-item__body">
-              <h3 class="service-item__panel-title">写真・SNS素材の提供</h3>
-              <!-- TODO: 説明文は仮文。素材の利用範囲を確認 -->
-              <p>取材のときに撮影した写真などの素材を納品します。自社のSNSや社内資料などでご活用いただけます。</p>
+              <h3 class="service-item__panel-title">写真・素材提供</h3>
+              <dl class="svc-two">
+                <dt>提供するもの</dt>
+                <dd>取材で撮影した写真などの素材の納品。</dd>
+                <dt>企業にとっての価値</dt>
+                <dd>取材で制作した写真等の素材を、企業のWebサイト・SNSなどにも活用できます。</dd>
+              </dl>
             </div>
           </div>
         </div>
-        <div class="service-item">
+        <!-- TODO: レポートの頻度と内容（lp-changes-v2.md §4-D） -->
+          <div class="service-item">
           <button type="button" class="service-item__btn" id="svc-btn-06" aria-expanded="false" aria-controls="svc-panel-06">
             <span class="service-item__num">06</span>
             <span class="service-item__icon"><svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg></span>
-            <span class="service-item__title">年間活動レポート<span class="tag">年1回</span></span>
+            <span class="service-item__title">年間レポート<span class="tag">年1回</span></span>
           </button>
           <div class="service-item__panel" id="svc-panel-06" role="region" aria-labelledby="svc-btn-06">
             <!-- TODO: サービスの画像に差し替え（assets/images/placeholder/service.svg） -->
-            <img class="service-item__img" src="assets/images/placeholder/service.svg" width="800" height="450" loading="lazy" alt="年間活動レポートのイメージ画像（差し替え予定）">
+            <img class="service-item__img" src="assets/images/placeholder/service.svg" width="800" height="450" loading="lazy" alt="年間レポートのイメージ画像（差し替え予定）">
             <div class="service-item__body">
-              <h3 class="service-item__panel-title">年間活動レポート</h3>
-              <p>1年間の活動を、レポートにまとめてお届けします。</p>
-              <ul class="report-list">
-                <li><strong>数字で見る</strong>公開した記事・ココロミーのInstagram投稿の閲覧数などの数値（トラッキング）</li>
-                <li><strong>声で見る</strong>取材を担当した学生ライターや、交流会で話した学生の感想</li>
-              </ul>
-              <!-- TODO: レポートの具体的な項目（計測する数値・感想の集め方）を確認（lp-spec.md §10） -->
+              <h3 class="service-item__panel-title">年間レポート</h3>
+              <dl class="svc-two">
+                <dt>提供するもの</dt>
+                <dd>実施内容をまとめたレポート。公開した記事・ココロミーのInstagram投稿の閲覧数などの数値と、取材を担当した学生ライターや交流会で話した学生の感想をまとめます。</dd>
+                <dt>企業にとっての価値</dt>
+                <dd>実施内容や発信の成果を振り返り、今後の広報活動に活用できるレポートを提供します。</dd>
+              </dl>
             </div>
           </div>
         </div>
       </div>
+      <p class="service-note reveal">※ 具体的な提供回数・素材の利用条件は、最終仕様に合わせて記載します（未確定の部分は<span class="todo">【要入力】</span>）。</p>
     </div>
   </section>
+
+  <!-- CTA（#4 サービス内容の後。lp-changes-v2.md §3-L） -->
+  <div class="cta-band">
+    <div class="container cta-band__inner reveal">
+      <p class="cta-band__text">内容や進め方について、詳しくご説明します。</p>
+      <a class="btn btn--primary" href="#contact">まずは相談してみる<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
 
   <!-- ===== #6 事例・実績（到達規模＋取り組みの事例＋掲載記事。2026-10-27 lp-changes.md §3・§5） ===== -->
   <section class="section" id="results" aria-labelledby="results-title">

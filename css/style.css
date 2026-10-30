@@ -202,7 +202,7 @@ button, input, textarea { font: inherit; color: inherit; }
 .intro__media strong { margin-right: .8em; color: var(--color-green-dark); }
 
 /* ---------- #4 ソリューション（3つを同列に） ---------- */
-.solution-list { display: grid; gap: 16px; }
+.solution-list { display: grid; gap: 16px; margin-bottom: 56px; }
 .solution-card {
   display: flex; flex-direction: column; gap: 8px;
   background: var(--color-white); border-radius: var(--radius-card); box-shadow: var(--shadow-card);
@@ -421,12 +421,12 @@ button, input, textarea { font: inherit; color: inherit; }
 .service-item__body { margin-top: 14px; }
 .service-item__panel-title { font-size: 18px; font-weight: 900; line-height: 1.5; }
 .service-item__body > p { margin-top: 8px; font-size: 15px; }
-.report-list { margin-top: 12px; display: grid; gap: 8px; }
-.report-list li {
-  background: var(--color-bg); border-radius: var(--radius-sm); padding: 10px 14px;
-  font-size: 15px; line-height: 1.6;
-}
-.report-list strong { display: block; font-size: 13px; color: var(--color-green-dark); }
+/* 「提供するもの」＋「企業にとっての価値」の2段 */
+.svc-two { margin-top: 10px; display: grid; gap: 4px; }
+.svc-two dt { font-size: 13px; font-weight: 700; color: var(--color-green-dark); margin-top: 6px; }
+.svc-two dd { margin: 0; font-size: 15px; }
+.svc-two dd:last-of-type { font-weight: 700; }
+.service-note { margin-top: 16px; font-size: 13px; color: var(--color-text-sub); text-align: center; }
 
 .ideas {
   margin-top: 16px; padding: 18px 16px;
