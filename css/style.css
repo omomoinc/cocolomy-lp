@@ -180,7 +180,8 @@ button, input, textarea { font: inherit; color: inherit; }
   font-size: clamp(30px, 7.6vw, 44px);
   font-weight: 700; line-height: 1.4; letter-spacing: .04em;
 }
-.hero__tagline { margin-top: 16px; font-size: 20px; font-weight: 700; color: var(--color-main-dark); line-height: 1.6; }
+.hero__lead { margin-top: 16px; font-size: 17px; max-width: 30em; }
+.hero__tagline { margin-top: 12px; font-size: 20px; font-weight: 700; color: var(--color-main-dark); line-height: 1.6; }
 .hero__actions { margin-top: 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; }
 .hero__consult {
   display: inline-flex; align-items: center; min-height: 44px;
