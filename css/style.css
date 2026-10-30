@@ -175,12 +175,7 @@ button, input, textarea { font: inherit; color: inherit; }
   font-size: clamp(26px, 7vw, 46px);
   font-weight: 900; line-height: 1.4; letter-spacing: .04em;
 }
-.hero__lead { margin-top: 8px; font-size: 16px; }
-.hero__lead--strong { margin-top: 16px; font-size: 18px; font-weight: 700; color: var(--color-green-dark); line-height: 1.6; }
-/* 単語レベルのキャッチ（学生取材 / 情報発信 / 交流会） */
-.hero__keywords { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 8px 0; }
-.hero__keywords li { font-size: 17px; font-weight: 900; color: var(--color-green-dark); }
-.hero__keywords li + li::before { content: "×"; margin: 0 .5em; color: var(--color-text-sub); font-weight: 400; }
+.hero__tagline { margin-top: 16px; font-size: 20px; font-weight: 700; color: var(--color-green-dark); line-height: 1.6; }
 .hero__actions { margin-top: 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; }
 .hero__consult {
   font-weight: 700; color: var(--color-green-dark);
@@ -787,7 +782,7 @@ button, input, textarea { font: inherit; color: inherit; }
   }
   .hero__visual figcaption { right: 16px; bottom: 16px; }
   .hero__title { font-size: 36px; }
-  .hero__lead { font-size: 17px; }
+  .hero__tagline { font-size: 22px; }
 
   .section { padding: 96px 0; }
   .section-head { margin-bottom: 48px; }
