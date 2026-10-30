@@ -531,7 +531,7 @@ button, input, textarea { font: inherit; color: inherit; }
   font-weight: 900; font-size: 15px; display: grid; place-items: center; line-height: 1;
 }
 .flow__icon { width: 40px; height: 40px; color: var(--color-green); }
-.flow__step h4 { font-size: 17px; font-weight: 700; margin-top: 8px; }
+.flow__step h4, .flow__title { font-size: 17px; font-weight: 700; margin-top: 8px; }
 .flow__step p { font-size: 14px; margin-top: 4px; }
 
 
@@ -791,6 +791,8 @@ button, input, textarea { font: inherit; color: inherit; }
 
   .flow { grid-template-columns: repeat(4, 1fr); gap: 32px; }
   .flow--3 { grid-template-columns: repeat(3, 1fr); }
+  .flow--5 { grid-template-columns: repeat(5, 1fr); gap: 24px; }
+  .flow--5 .flow__step:not(:last-child)::after { right: -20px; }
   .flow__step:not(:last-child)::after {
     /* PCは右向き矢印 */
     left: auto; right: -26px; top: 50%; bottom: auto; transform: translateY(-50%);
