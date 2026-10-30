@@ -406,21 +406,18 @@ button, input, textarea { font: inherit; color: inherit; }
 }
 .strength-card__text { margin: 0; font-size: 17px; font-weight: 700; line-height: 1.6; }
 
-/* ---------- #4 サービス内容: 情報発信の3本柱＋そのほかのサービス ---------- */
-.pillar-list { margin-top: 20px; display: grid; gap: 20px; }
-.pillar {
-  display: flex; flex-direction: column;
-  background: var(--color-white); border-radius: var(--radius-card); box-shadow: var(--shadow-card);
-  border-top: 4px solid var(--color-main); overflow: hidden;
+/* ---------- #4 サービス内容: 3ステップ（見つける・つくる・届ける）ごとの提供物 ---------- */
+.step-group { margin-top: 40px; }
+.step-group:first-of-type { margin-top: 0; }
+.step-group__head { display: flex; align-items: center; gap: 12px; font-size: 22px; font-weight: 700; color: var(--color-main); }
+.step-group__num {
+  flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%;
+  display: grid; place-items: center; line-height: 1;
+  background: var(--color-main); color: var(--color-white); font-size: 17px; font-weight: 700;
 }
-.pillar__img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
-.pillar__body { padding: 20px 22px 24px; }
-.pillar__num { font-size: 13px; font-weight: 700; color: var(--color-main); }
-.pillar__title { margin-top: 4px; font-size: 20px; font-weight: 700; line-height: 1.5; color: var(--color-main); }
-.pillar__title .icon { width: 24px; height: 24px; vertical-align: -4px; margin-right: 6px; }
-.pillar-ideas { margin-top: 20px; }
-.pillar-ideas .ideas { margin-top: 0; background: var(--color-white); box-shadow: var(--shadow-card); }
-.pillar-ideas .ideas__list li { background: var(--color-surface); }
+.step-group__note { margin-top: 6px; font-size: 14px; color: var(--color-text-sub); }
+.sub-service .ideas { margin-top: 12px; background: var(--color-surface); }
+.sub-service .ideas__list li { background: var(--color-white); }
 
 .sub-title--others { margin-top: 56px; }
 .sub-service-list { margin-top: 16px; display: grid; gap: 12px; }
@@ -430,7 +427,7 @@ button, input, textarea { font: inherit; color: inherit; }
 }
 .sub-service__title { font-size: 17px; font-weight: 700; line-height: 1.5; }
 .sub-service__title .icon { color: var(--color-main); vertical-align: -4px; margin-right: 6px; }
-.sub-service p { margin-top: 4px; font-size: 16px; color: var(--color-text-sub); }
+.sub-service .svc-two { margin-top: 6px; }
 
 /* 「提供するもの」＋「企業にとっての価値」の2段 */
 .svc-two { margin-top: 10px; display: grid; gap: 4px; }
@@ -801,8 +798,9 @@ button, input, textarea { font: inherit; color: inherit; }
 
 
   .article-grid { grid-template-columns: repeat(4, 1fr); }
-  .pillar-list { grid-template-columns: repeat(3, 1fr); }
-  .sub-service-list { grid-template-columns: repeat(3, 1fr); }
+  .sub-service-list { grid-template-columns: repeat(3, 1fr); align-items: start; }
+  .sub-service-list--2 { grid-template-columns: 2fr 1fr; }
+  .sub-service-list--1, .sub-service-list--etc { grid-template-columns: repeat(2, 1fr); }
 
   .stock-wrap { padding: 28px 32px 24px; }
   .stock__months, .stock__row { grid-template-columns: 230px repeat(12, minmax(0, 1fr)); }
