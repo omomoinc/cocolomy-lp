@@ -578,6 +578,10 @@ button, input, textarea { font: inherit; color: inherit; }
 /* 広告費別途は本文サイズで明示（lp-spec.md §5-8） */
 .price-card__ad { font-size: 16px; font-weight: 700; margin-top: 12px; }
 
+/* 条件表 */
+.price-table { width: 100%; margin-top: 16px; border-collapse: collapse; text-align: left; font-size: 15px; }
+.price-table th, .price-table td { padding: 12px 14px; border-bottom: 1px solid var(--color-line); vertical-align: top; line-height: 1.6; }
+.price-table th { width: 34%; font-weight: 700; color: var(--color-green-dark); background: var(--color-bg); }
 .price-card__single { margin-top: 20px; text-align: center; font-size: 14px; color: var(--color-text-sub); }
 .price-card__includes-title {
   margin-top: 28px; font-size: 16px; font-weight: 700; color: var(--color-green-dark);
