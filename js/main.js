@@ -1,4 +1,4 @@
-/* 【仮】ココロミー+ LP（サービス名は仮）
+/* ココロミー for Business LP（サービス名の合意は未確認。lp-changes-v2.md §4-A）
    - ヘッダーのスクロール時の影
    - スクロールで要素をふわっと表示
    - 問い合わせフォーム（ダミー送信：実際には送らず完了表示のみ） */
@@ -6,9 +6,9 @@
 (function () {
   'use strict';
 
-  // サービス名（仮）。ここが定義の場所。決まったらここと、HTML内の「【仮】ココロミー+」を一括置換する
+  // サービス名。ここが定義の場所（名称の合意は未確認。lp-changes-v2.md §4-A）。変えるときは、ここと HTML 内の「ココロミー for Business」を一括置換する
   // （HTMLにも同じ文字を入れてあるのは、JSが動かない環境や title・OGP でも表示するため）
-  var SERVICE_NAME = '【仮】ココロミー+';
+  var SERVICE_NAME = 'ココロミー for Business';
   document.querySelectorAll('[data-service-name]').forEach(function (el) { el.textContent = SERVICE_NAME; });
 
   // ヘッダー：少しスクロールしたら影をつける

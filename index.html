@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- 公開範囲が確定するまで検索エンジンに載せない（lp-spec.md §8） -->
   <meta name="robots" content="noindex, nofollow">
-  <!-- サービス名は仮（【仮】ココロミー+）。決まったら全ファイルで「【仮】ココロミー+」を一括置換し、js/main.js の SERVICE_NAME も直す -->
-  <title>【仮】ココロミー+｜長野の学生と企業をつなぐ広報PR</title>
+  <!-- サービス名「ココロミー for Business」（名称の合意は未確認。lp-changes-v2.md §4-A）。変えるときは全ファイルで一括置換し、js/main.js の SERVICE_NAME も直す -->
+  <title>ココロミー for Business｜長野の学生と企業をつなぐ広報PR</title>
   <meta name="description" content="長野の学生メディア「ココロミー」の学生ライターによる取材・記事掲載、ココロミーのInstagramへの掲載、学生との交流会をセットにした、企業向けの年間プログラムです。">
 
   <!-- OGP（TODO: 公開URL・OGP画像が決まったら差し替え） -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="【仮】ココロミー+｜長野の学生と企業をつなぐ広報PR">
+  <meta property="og:title" content="ココロミー for Business｜長野の学生と企業をつなぐ広報PR">
   <meta property="og:description" content="学生ライターによる取材・記事掲載、ココロミーのInstagramへの掲載、学生との交流会をセットにした、企業向けの年間プログラムです。">
   <meta property="og:url" content="https://example.com/">
   <meta property="og:image" content="https://example.com/assets/images/ogp.png">
@@ -61,10 +61,10 @@
 <header class="site-header" id="top">
   <div class="site-header__inner">
     <!-- TODO: ロゴデータ到着後に <img> に差し替え（README「TODO一覧」参照） -->
-    <!-- 「企業パートナー」の表記は廃止（2026-10-27 lp-changes.md §1）。サービス名は仮 -->
-    <a class="logo" href="#top" aria-label="【仮】ココロミー+ トップへ">
+    <!-- 旧サービス名の表記は廃止（2026-10-27 lp-changes.md §1） -->
+    <a class="logo" href="#top" aria-label="ココロミー for Business トップへ">
       <span class="logo__sub">長野の学生と企業をつなぐ</span>
-      <span class="logo__main"><span data-service-name>【仮】ココロミー+</span></span>
+      <span class="logo__main"><span data-service-name>ココロミー for Business</span></span>
     </a>
     <nav class="global-nav" aria-label="ページ内ナビゲーション">
       <ul>
@@ -99,7 +99,7 @@
       <div class="hero__text">
         <p class="hero__label">長野の学生向け広報PR（オンライン＋オフライン）</p>
         <!-- FVはサービス名（仮）＋単語レベルのキャッチだけにする（2026-10-27 lp-changes.md §1）。説明文は次の「サービスとは」へ移した -->
-        <h1 class="hero__title" id="hero-title"><span data-service-name>【仮】ココロミー+</span></h1>
+        <h1 class="hero__title" id="hero-title"><span data-service-name>ココロミー for Business</span></h1>
         <ul class="hero__keywords" aria-label="サービスの内容">
           <li>学生取材</li>
           <li>情報発信</li>
@@ -118,7 +118,7 @@
     <div class="container container--narrow intro reveal">
       <div class="section-head">
         <p class="section-head__en">About</p>
-        <h2 class="section-head__title" id="intro-title"><span data-service-name>【仮】ココロミー+</span>とは</h2>
+        <h2 class="section-head__title" id="intro-title"><span data-service-name>ココロミー for Business</span>とは</h2>
       </div>
       <!-- 文面は 2026-10-23 ユーザー指定のもの。「月1回のレポート」はサービス内容の「年1回の年間活動レポート」と食い違うため確認中（README） -->
       <p class="intro__lead">学生との一過性でない、持続的な交流の場を設計します。</p>
@@ -141,7 +141,7 @@
         <li><svg class="icon" aria-hidden="true"><use href="#i-message"/></svg>学生と自然に交流できる場がない</li>
         <li><svg class="icon" aria-hidden="true"><use href="#i-message"/></svg>学生向けの広報やSNSに取り組みたいが、社内に十分なリソースがない</li>
       </ul>
-      <p class="issues-answer reveal"><span data-service-name>【仮】ココロミー+</span>は、こうしたお悩みに向けた年間プログラムです。</p>
+      <p class="issues-answer reveal"><span data-service-name>ココロミー for Business</span>は、こうしたお悩みに向けた年間プログラムです。</p>
     </div>
   </section>
 
@@ -151,7 +151,7 @@
     <div class="container">
       <div class="section-head reveal">
         <p class="section-head__en">Solution</p>
-        <h2 class="section-head__title" id="solution-title"><span data-service-name>【仮】ココロミー+</span>でできること</h2>
+        <h2 class="section-head__title" id="solution-title"><span data-service-name>ココロミー for Business</span>でできること</h2>
         <p class="section-head__lead">オンライン（記事・Instagram）とオフライン（交流会）を組み合わせて、学生との関係を1年かけてつくります。</p>
       </div>
       <ul class="solution-list reveal">
@@ -600,7 +600,7 @@
         <!-- 契約は年間。支払いは月払い／年払いを選べる（2026-10-23 ユーザー指示。lp-spec.md §5-6 の総額480,000円より優先） -->
         <!-- TODO: 料金は打ち合わせ後に確定（金額は変えていない。2026-10-27 lp-changes.md §6） -->
         <!-- TODO: 契約条件（最低契約期間・途中解約・年払いの支払い時期）が確定したら見直す（lp-spec.md §10） -->
-        <p class="price-card__plan"><span data-service-name>【仮】ココロミー+</span>（年間契約のみ）</p>
+        <p class="price-card__plan"><span data-service-name>ココロミー for Business</span>（年間契約のみ）</p>
         <p class="price-card__choose">ご契約は年間契約のみです。お支払いは、月払いと年払いから選べます。</p>
         <ul class="pay-options">
           <li class="pay-option">
@@ -760,7 +760,7 @@
 
 <footer class="site-footer">
   <div class="container site-footer__inner">
-    <p class="site-footer__logo"><span data-service-name>【仮】ココロミー+</span></p>
+    <p class="site-footer__logo"><span data-service-name>ココロミー for Business</span></p>
     <p class="site-footer__copy"><small>&copy; 株式会社OMOMO</small></p>
   </div>
 </footer>
