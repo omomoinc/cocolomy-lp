@@ -803,3 +803,11 @@ button, input, textarea { font: inherit; color: inherit; }
   .includes { grid-template-columns: repeat(6, 1fr); }
   .includes li { padding: 16px 4px; }
 }
+
+/* ヘッダーのナビは7項目あるため、1200px未満では隠す（ロゴ＋「お問い合わせ」のみ。2026-10-30） */
+@media (max-width: 1199px) {
+  .global-nav { display: none; }
+}
+@media (min-width: 1200px) {
+  .global-nav a { white-space: nowrap; padding: 6px 8px; }
+}
