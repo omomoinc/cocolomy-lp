@@ -330,7 +330,10 @@ button, input, textarea { font: inherit; color: inherit; }
 /* ---------- #3 公開済み記事 ---------- */
 .articles { margin-top: 0; }
 /* 記事の概要（書き手・企画・本数・掲載先） */
-.article-outline { margin-top: 56px; }
+.article-outline { margin-top: 40px; }
+/* 実績を1本に絞ったときの大きなカード（PCは画像と文を横に並べる） */
+.article-card--featured { max-width: 960px; margin-inline: auto; }
+.article-card--featured .article-card__title { font-size: 20px; }
 .article-outline__list {
   margin: 20px auto 0; max-width: 880px; display: grid; gap: 1px;
   background: var(--color-line); border-radius: var(--radius-card); overflow: hidden; box-shadow: var(--shadow-card);
@@ -729,6 +732,9 @@ button, input, textarea { font: inherit; color: inherit; }
   .strength-list { grid-template-columns: repeat(3, 1fr); gap: 16px; }
   .strength-list--4 { grid-template-columns: repeat(2, 1fr); }
   .usage-list { grid-template-columns: repeat(3, 1fr); }
+  .article-card--featured { flex-direction: row; }
+  .article-card--featured .article-card__thumb { flex: 0 0 52%; }
+  .article-card--featured .article-card__body { padding: 28px 32px; justify-content: center; }
   .case-card { padding: 32px; }
   .article-grid { grid-template-columns: repeat(2, 1fr); }
   .ideas__list { grid-template-columns: repeat(2, 1fr); }

@@ -131,27 +131,26 @@
     </div>
   </section>
 
-  <!-- ===== #3 記事の実績と、記事ができるまで（2026-10-30 ユーザー指示: お悩みの次、ココロミー for Businessとは？の前） ===== -->
+  <!-- ===== #3 記事の実績（1本）と、記事1本ができるまで（2026-10-30 ユーザー指示: お悩みの次、ココロミー for Businessとは？の前） ===== -->
   <section class="section" id="articles" aria-labelledby="articles-title">
     <div class="container">
       <div class="section-head reveal">
         <p class="section-head__en">Articles</p>
         <h2 class="section-head__title" id="articles-title">記事の実績</h2>
-        <p class="section-head__lead">学生ライターが実際に取材・執筆し、ココロミーに掲載した記事です。</p>
+        <p class="section-head__lead">学生ライターが実際に取材・執筆し、ココロミーに掲載した記事の一例です。</p>
       </div>
+      <!-- 実績は1本に絞る（2026-10-30 ユーザー指示）。入れ替えるときは、下のコメントに退避した3本から選んで差し替える。公開前に掲載企業へ一言確認する -->
       <div class="articles reveal">
-        <!-- 公開前に、掲載企業へ一言確認する（README 参照）。サムネイルは assets/images/articles/（800×450 の WebP） -->
-        <ul class="article-grid">
-          <li>
-            <a class="article-card" href="https://cocolomy.com/navi/fpij" target="_blank" rel="noopener">
-              <div class="article-card__thumb"><img src="assets/images/articles/fpij.webp" width="800" height="450" loading="lazy" alt="生活経済研究所長野の講師と学生ライターが話す様子と、オフィスの写真"></div>
-              <div class="article-card__body">
-                <p class="article-card__company">生活経済研究所長野</p>
-                <p class="article-card__title">“中立”を武器に、お金の不安に向き合う。生活経済研究所長野の講師という仕事</p>
-                <span class="article-card__more">記事を読む<span class="visually-hidden">（新しいタブで開きます）</span><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></span>
-              </div>
-            </a>
-          </li>
+        <a class="article-card article-card--featured" href="https://cocolomy.com/navi/fpij" target="_blank" rel="noopener">
+          <div class="article-card__thumb"><img src="assets/images/articles/fpij.webp" width="800" height="450" loading="lazy" alt="生活経済研究所長野の講師と学生ライターが話す様子と、オフィスの写真"></div>
+          <div class="article-card__body">
+            <p class="article-card__company">生活経済研究所長野</p>
+            <p class="article-card__title">“中立”を武器に、お金の不安に向き合う。生活経済研究所長野の講師という仕事</p>
+            <span class="article-card__more">記事を読む<span class="visually-hidden">（新しいタブで開きます）</span><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></span>
+          </div>
+        </a>
+      </div>
+      <!-- 退避した記事カード（伸和工作／上松電子／TRILL）。サムネイルは assets/images/articles/
           <li>
             <a class="article-card" href="https://cocolomy.com/navi/shinwakosaku/" target="_blank" rel="noopener">
               <div class="article-card__thumb"><img src="assets/images/articles/shinwakosaku.webp" width="800" height="450" loading="lazy" alt="伸和工作の社員の集合写真と、工場・製品の写真"></div>
@@ -182,19 +181,7 @@
               </div>
             </a>
           </li>
-        </ul>
-      </div>
-
-      <!-- 記事を書く概要（確定している内容だけ） -->
-      <div class="article-outline reveal">
-        <h3 class="sub-title">記事の概要</h3>
-        <dl class="article-outline__list">
-          <div><dt>書き手</dt><dd>長野の学生ライター</dd></div>
-          <div><dt>企画</dt><dd>企業ごとに、学生ライターと一緒に考えます</dd></div>
-          <div><dt>本数</dt><dd>年2本</dd></div>
-          <div><dt>掲載先</dt><dd>ココロミーのWebメディア（ココロミーのInstagramでも紹介）</dd></div>
-        </dl>
-      </div>
+      -->
 
       <!-- 記事1本ができるまで（企業側の負担の記載【要入力】を含む。2026-10-30 ユーザー指示で #9 流れからここへ移した） -->
       <h3 class="flow-title reveal">記事1本ができるまで<span class="flow-title__sub">（年2回）</span></h3>
@@ -427,6 +414,17 @@
         </div>
         <!-- TODO: 契約終了後も、記事・企業一覧ページへの掲載が残るかを確認する -->
         <p class="stock__note"><span class="stock__note-wide"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>矢印の帯は、公開した記事などがその後も残り続けることを表しています。</span>契約終了後の掲載の扱いは<span class="todo">【要入力】</span></p>
+      </div>
+
+      <!-- 記事の概要（確定している内容だけ）。2026-10-30 ユーザー指示で「記事の実績」から移した -->
+      <div class="article-outline reveal">
+        <h3 class="sub-title">記事の概要</h3>
+        <dl class="article-outline__list">
+          <div><dt>書き手</dt><dd>長野の学生ライター</dd></div>
+          <div><dt>企画</dt><dd>企業ごとに、学生ライターと一緒に考えます</dd></div>
+          <div><dt>本数</dt><dd>年2本</dd></div>
+          <div><dt>掲載先</dt><dd>ココロミーのWebメディア（ココロミーのInstagramでも紹介）</dd></div>
+        </dl>
       </div>
 
       <div class="stock-result reveal">
