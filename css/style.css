@@ -4,21 +4,23 @@
    ========================================================= */
 
 :root {
-  /* カラートークン（lp-tone-and-manner-for-ai.md §2。パレットにない色は足さない） */
-  --color-bg: #FBFAF7;          /* 背景: ページ基調（純白より少し暖かい） */
-  --color-bg-alt: #F4F1EA;      /* 暖色帯: 交互に挟む背景帯 */
+  /* カラートークン（lp-tone-and-manner.md §2 をもとに、2026-10-30 ユーザー指示で「ベースは白、青を多用」に変更。
+     暖色の背景（#FBFAF7・#F4F1EA）をやめ、帯・淡い面・罫線を青系にした） */
+  --color-bg: #FFFFFF;          /* 背景: ページ基調（白） */
+  --color-bg-alt: #EEF4FA;      /* 淡い青の帯: 交互に挟む背景帯 */
+  --color-surface: #F4F8FC;     /* カードの中の面（料金の枠、表の見出し、フォームの入力欄など） */
   --color-dark: #1E2F44;        /* 濃色帯: 1ページ1〜2回まで（今はフッターのみ） */
   --color-main: #1F4E79;        /* メイン（信頼）: 見出しの強調語・リンク・アイコン・装飾 */
   --color-main-dark: #1F4E79;   /* 小さな文字のメイン色（メインと同じ） */
   --color-main-darker: #1E2F44; /* 濃いメイン（濃色帯と同じ） */
-  --color-main-pale: #F4F1EA;   /* 淡い面: タグ・アイコンの地など（暖色帯と同じ） */
+  --color-main-pale: #E3EDF7;   /* 淡い青: タグ・アイコンの地など */
   --color-cta: #D9480F;         /* アクセント: CTAボタンのみ */
   --color-cta-hover: #B73C0A;
   --color-accent-pale: #FFF1E8; /* 淡いアクセント: 注意書き・バッジの背景 */
   --color-text: #1F2D3D;        /* 本文（純黒は使わない） */
   --color-text-sub: #5B6B7C;    /* 補助文字: 注釈・キャプション */
   --color-white: #FFFFFF;       /* カード面 */
-  --color-line: #E1DDD3;        /* 罫線: 区切り・カード枠 */
+  --color-line: #D6E1EC;        /* 罫線: 区切り・カード枠（青みのある灰色） */
   --color-todo: var(--color-text);          /* 【要入力】表示（モック用） */
   --color-todo-bg: var(--color-accent-pale);
 
@@ -122,7 +124,7 @@ button, input, textarea { font: inherit; color: inherit; }
 .site-header {
   position: fixed; inset: 0 0 auto 0; z-index: 50;
   height: var(--header-h);
-  background: rgba(251, 250, 247, .96);
+  background: rgba(255, 255, 255, .96);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-bottom: 1px solid transparent;
@@ -170,8 +172,8 @@ button, input, textarea { font: inherit; color: inherit; }
 }
 .hero__label {
   display: inline-block;
-  font-size: 13px; font-weight: 700; color: var(--color-main-dark);
-  background: var(--color-main-pale); border-radius: var(--radius-pill);
+  font-size: 14px; font-weight: 700; color: var(--color-white);
+  background: var(--color-main); border-radius: var(--radius-pill);
   padding: 4px 14px; margin-bottom: 16px;
 }
 .hero__title {
@@ -286,18 +288,15 @@ button, input, textarea { font: inherit; color: inherit; }
 }
 
 /* ---------- CTA帯 ---------- */
-.cta-band { padding: 40px 0; background: var(--color-bg); }
+.cta-band { padding: 48px 0; background: var(--color-main); color: var(--color-white); }
 .cta-band__inner {
   /* 枠線が画面端に接しないよう、左右に余白を残す */
   width: calc(100% - var(--gutter) * 2);
   max-width: calc(var(--container) - var(--gutter) * 2);
   display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center;
-  background: var(--color-white);
-  border: 2px dashed var(--color-main);
-  border-radius: var(--radius-card);
-  padding: 28px 20px;
+  padding: 0;
 }
-.cta-band__text { font-weight: 700; }
+.cta-band__text { font-weight: 700; font-size: 18px; }
 
 /* ---------- #6 事例・実績 ---------- */
 /* セクション内の小見出し（到達規模／取り組みの事例／掲載した記事） */
@@ -325,7 +324,7 @@ button, input, textarea { font: inherit; color: inherit; }
 .case-card__label .icon { color: var(--color-main); width: 18px; height: 18px; }
 .case-card__voice {
   margin: 20px 0 0; padding: 16px 20px;
-  background: var(--color-bg); border-left: 4px solid var(--color-main); border-radius: var(--radius-sm);
+  background: var(--color-surface); border-left: 4px solid var(--color-main); border-radius: var(--radius-sm);
 }
 .case-card__voice-label { font-size: 13px; font-weight: 700; color: var(--color-main-dark); }
 
@@ -582,7 +581,7 @@ button, input, textarea { font: inherit; color: inherit; }
 .pay-options { margin-top: 16px; display: grid; gap: 12px; }
 .pay-option {
   border: 2px solid var(--color-line); border-radius: var(--radius-card);
-  background: var(--color-bg); padding: 20px 16px;
+  background: var(--color-surface); padding: 20px 16px;
 }
 .pay-option__name { font-size: 17px; font-weight: 700; }
 .pay-option__main {
@@ -601,7 +600,7 @@ button, input, textarea { font: inherit; color: inherit; }
 /* 条件表 */
 .price-table { width: 100%; margin-top: 16px; border-collapse: collapse; text-align: left; font-size: 16px; }
 .price-table th, .price-table td { padding: 12px 14px; border-bottom: 1px solid var(--color-line); vertical-align: top; line-height: 1.6; }
-.price-table th { width: 34%; font-weight: 700; color: var(--color-main-dark); background: var(--color-bg); }
+.price-table th { width: 34%; font-weight: 700; color: var(--color-main-dark); background: var(--color-surface); }
 @media (max-width: 599px) {
   .price-table th, .price-table td { display: block; width: auto; }
   .price-table th { border-bottom: 0; padding-bottom: 4px; }
@@ -620,7 +619,7 @@ button, input, textarea { font: inherit; color: inherit; }
 }
 .includes li {
   display: flex; flex-direction: column; align-items: center; gap: 6px;
-  background: var(--color-bg); border-radius: var(--radius-sm);
+  background: var(--color-surface); border-radius: var(--radius-sm);
   padding: 14px 8px; font-size: 14px; font-weight: 700; line-height: 1.5;
 }
 .includes .icon { width: 28px; height: 28px; color: var(--color-main); }
@@ -679,7 +678,7 @@ button, input, textarea { font: inherit; color: inherit; }
 .field textarea {
   width: 100%; min-height: 48px;
   border: 1px solid var(--color-text-sub); border-radius: var(--radius-sm);
-  background: var(--color-bg); padding: 10px 14px;
+  background: var(--color-surface); padding: 10px 14px;
   font-size: 16px; /* iOSでのズーム防止 */
 }
 .field textarea { resize: vertical; }
@@ -691,7 +690,7 @@ button, input, textarea { font: inherit; color: inherit; }
 .check {
   display: flex; align-items: center; gap: 10px; cursor: pointer;
   border: 1.5px solid var(--color-line); border-radius: var(--radius-sm);
-  padding: 10px 14px; background: var(--color-bg);
+  padding: 10px 14px; background: var(--color-surface);
 }
 .check input { width: 20px; height: 20px; accent-color: var(--color-main-dark); flex-shrink: 0; }
 .check:has(input:checked) { border-color: var(--color-main); background: var(--color-main-pale); }
