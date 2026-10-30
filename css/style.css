@@ -490,6 +490,28 @@ button, input, textarea { font: inherit; color: inherit; }
     radial-gradient(circle, var(--color-green) 0 5px, transparent 6px) left center / calc(100% / 12) 100% repeat-x,
     var(--color-green-pale);
 }
+.stock__when { display: none; }
+/* 600px未満: 横長の図をやめ、縦に並べた簡易表示にする（lp-changes-v2.md §3-M） */
+@media (max-width: 599px) {
+  .stock-scroll { overflow: visible; }
+  .stock__months { display: none; }
+  .stock__rows { gap: 0; margin-left: 6px; border-left: 3px solid var(--color-green-pale); }
+  .stock__row { display: block; min-width: 0; position: relative; padding: 10px 0 10px 18px; }
+  .stock__row::before {
+    content: ""; position: absolute; left: -8px; top: 16px;
+    width: 13px; height: 13px; border-radius: 50%; background: var(--color-green);
+  }
+  .stock__bar { display: none; }
+  .stock__note-wide { display: none; }
+  .stock__label { padding-right: 0; }
+  .stock__label strong { font-size: 15px; }
+  .stock__label small { font-size: 13px; }
+  .stock__when {
+    display: inline-block; align-self: flex-start; margin-top: 4px;
+    font-size: 12px; font-weight: 700; color: var(--color-green-dark);
+    background: var(--color-green-pale); border-radius: var(--radius-pill); padding: 1px 10px;
+  }
+}
 .stock__note {
   margin-top: 16px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
   font-size: 13px; color: var(--color-text-sub);
@@ -582,6 +604,11 @@ button, input, textarea { font: inherit; color: inherit; }
 .price-table { width: 100%; margin-top: 16px; border-collapse: collapse; text-align: left; font-size: 15px; }
 .price-table th, .price-table td { padding: 12px 14px; border-bottom: 1px solid var(--color-line); vertical-align: top; line-height: 1.6; }
 .price-table th { width: 34%; font-weight: 700; color: var(--color-green-dark); background: var(--color-bg); }
+@media (max-width: 599px) {
+  .price-table th, .price-table td { display: block; width: auto; }
+  .price-table th { border-bottom: 0; padding-bottom: 4px; }
+}
+.stock__note-wide { display: inline-flex; align-items: center; gap: 8px; }
 .price-card__single { margin-top: 20px; text-align: center; font-size: 14px; color: var(--color-text-sub); }
 .price-card__includes-title {
   margin-top: 28px; font-size: 16px; font-weight: 700; color: var(--color-green-dark);

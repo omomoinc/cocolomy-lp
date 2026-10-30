@@ -365,7 +365,7 @@
         <p class="section-head__lead">単発の広告ではなく、1年を通して企業の広報・PRを支援します。</p>
       </div>
 
-      <!-- 帯の開始位置は style の --s（月＋1）。取材の月は未確定なので「スケジュール例」。PCが前提で、狭い画面では横にスクロールする -->
+      <!-- 帯の開始位置は style の --s（月＋1）。取材の月は未確定なので「スケジュール例」。PCが前提。600px未満では縦の簡易表示に切り替える（css の .stock__when） -->
       <div class="stock-wrap reveal">
         <p class="schedule__caption"><span class="sample-badge">スケジュール例</span>実際の取材・公開の時期は<span class="todo">【要入力】</span></p>
         <div class="stock-scroll">
@@ -386,33 +386,33 @@
           </div>
           <ol class="stock__rows">
           <li class="stock__row">
-            <span class="stock__label"><strong>契約・企画設計</strong><small>企業の魅力やPR課題をヒアリング</small></span>
+            <span class="stock__label"><strong>契約・企画設計</strong><small>企業の魅力やPR課題をヒアリング</small><span class="stock__when" aria-hidden="true">1か月目</span></span>
             <span class="stock__bar stock__bar--point" style="--s:2"><span class="visually-hidden">1か月目</span></span>
           </li>
           <li class="stock__row">
-            <span class="stock__label"><strong>第1回取材・記事公開</strong><small>学生による取材と記事制作、SNS発信</small></span>
+            <span class="stock__label"><strong>第1回取材・記事公開</strong><small>学生による取材と記事制作、SNS発信</small><span class="stock__when" aria-hidden="true">2か月目〜（公開後も残る）</span></span>
             <span class="stock__bar" style="--s:3"><span class="visually-hidden">2か月目から。公開した記事などは、その後も残る</span></span>
           </li>
           <li class="stock__row">
-            <span class="stock__label"><strong>第2回取材・記事公開</strong><small>別のテーマ・切り口から企業の魅力を紹介</small></span>
+            <span class="stock__label"><strong>第2回取材・記事公開</strong><small>別のテーマ・切り口から企業の魅力を紹介</small><span class="stock__when" aria-hidden="true">7か月目〜（公開後も残る）</span></span>
             <span class="stock__bar" style="--s:8"><span class="visually-hidden">7か月目から。公開した記事などは、その後も残る</span></span>
           </li>
           <li class="stock__row">
-            <span class="stock__label"><strong>年間レポート</strong><small>取り組みや発信内容を振り返り</small></span>
+            <span class="stock__label"><strong>年間レポート</strong><small>取り組みや発信内容を振り返り</small><span class="stock__when" aria-hidden="true">12か月目</span></span>
             <span class="stock__bar stock__bar--point" style="--s:13"><span class="visually-hidden">12か月目</span></span>
           </li>
           <li class="stock__row">
-            <span class="stock__label"><strong>企業情報の掲載</strong><small>1年を通して、企業一覧ページに掲載</small></span>
+            <span class="stock__label"><strong>企業情報の掲載</strong><small>1年を通して、企業一覧ページに掲載</small><span class="stock__when" aria-hidden="true">1年を通して</span></span>
             <span class="stock__bar stock__bar--year" style="--s:2"><span class="visually-hidden">1年を通して</span></span>
           </li>
           <li class="stock__row">
-            <span class="stock__label"><strong>オモモ会への参加機会</strong><small>1年を通して、交流会に参加できる</small></span>
+            <span class="stock__label"><strong>オモモ会への参加機会</strong><small>1年を通して、交流会に参加できる</small><span class="stock__when" aria-hidden="true">1年を通して</span></span>
             <span class="stock__bar stock__bar--dots" style="--s:2"><span class="visually-hidden">1年を通して</span></span>
           </li>
           </ol>
         </div>
         <!-- TODO: 契約終了後も、記事・企業一覧ページへの掲載が残るかを確認する -->
-        <p class="stock__note"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>矢印の帯は、公開した記事などがその後も残り続けることを表しています。契約終了後の掲載の扱いは<span class="todo">【要入力】</span></p>
+        <p class="stock__note"><span class="stock__note-wide"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>矢印の帯は、公開した記事などがその後も残り続けることを表しています。</span>契約終了後の掲載の扱いは<span class="todo">【要入力】</span></p>
       </div>
 
       <div class="stock-result reveal">
