@@ -710,6 +710,7 @@ button, input, textarea { font: inherit; color: inherit; }
   .usage-list { grid-template-columns: repeat(2, 1fr); gap: 16px; }
   .strength-list { grid-template-columns: repeat(3, 1fr); gap: 16px; }
   .strength-list--4 { grid-template-columns: repeat(2, 1fr); }
+  .usage-list { grid-template-columns: repeat(3, 1fr); }
   .case-card { padding: 32px; }
   .article-grid { grid-template-columns: repeat(2, 1fr); }
   .ideas__list { grid-template-columns: repeat(2, 1fr); }
